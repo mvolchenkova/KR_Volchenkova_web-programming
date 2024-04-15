@@ -99,3 +99,71 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 .sittingGirl{
   margin-top: 70px;
 }
+.secondContainer{
+  display:flex;
+  justify-content: center;
+  padding-top: 93px;
+  padding-left: 48px;
+}
+.papersheets{
+  width: 94%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(1,1fr);
+  column-gap: 30px;
+}
+.papersheets>div{
+  display: flex;
+  justify-content:flex-start;
+}
+.centerRect{
+  width: 534px;
+  height: 606px;
+}
+.rect1{
+background-image: url("./images_kr/recctangle1.png");
+display: flex;
+flex-direction: column;
+}
+.rect2{
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("./images_kr/rectangleCenter.svg");
+}
+.rect3{
+  display: flex;
+  flex-direction: column;
+  background-image: url("./images_kr/recctangle3.png");
+}
+.rect1>img, .rect2>img, .rect3>img{
+  width: 100px;
+  height: 100px;
+}
+.rect1, .rect2, .rect3{
+  align-items: center;
+  width: 525px;
+  padding-top: 78px;
+}
+.rectText{
+  width: 329px;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+  line-height: 23px;
+}
+.rectName{
+  padding-top: 20px;
+  font-size: 32px;
+  font-weight:600;
+}
+.learnMoreButton{
+  background-color:rgb(37,147,133);
+  color:white;
+  box-shadow: none;
+  border: none;
+  font-size: 24px;
+  border-radius: 40px;
+  padding:10px 46px;
+  margin-top: 60px;
+}
