@@ -6,6 +6,96 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font: inherit;
   }
   body, html{
-    width: 1920px;
+    width: 100%;
     background-color: rgb(208,244,234);
   }
+  .heeboFont{
+    font-family: "Heebo", sans-serif;
+  }
+  .meriendaFont{
+    font-family: "Merienda", cursive;
+  }
+  .bg1{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+  .head{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+  
+  .logo {
+    padding-left: 145px;
+    padding-top: 8px;
+    margin-right: 10px;
+  }
+  .links a{ 
+    text-decoration: none;
+    justify-content: space-between;
+    display: flex;
+    align-items:center;
+  }
+  .headerText{
+    color: black;
+    font-size: 28px;
+  }
+  .homeLink{
+    color: rgb(26,127,114);
+    font-weight: 600;
+    font-size: 32px;
+  }
+  .linkDiv {
+    padding-right: 70px;
+    width: 55.5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .linkDiv a {
+    flex-grow: 1;
+    text-decoration: none;
+    text-align: center;
+  }
+  .Detoxify{
+    background-color: none;
+    text-align: center;
+    font-size: 68px;
+    color: white;
+    padding: 67px 500px 0 500px;
+    line-height: 90px;
+    align-items: center;
+  }
+  .firstContainer{
+    height: auto;
+    background-image: url("./images_kr/BGvector.svg");
+    top: 0;
+    justify-content: center;
+  }
+  .detoxLorem{
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 410px 0 410px;
+  }
+  .getStartButton{
+    width: 300px;
+    border:none;
+    border-radius: 40px;
+    box-shadow: none;
+    margin-top:28px;
+    padding: 20px 0 20px 0;
+    font-size: 28px;
+    background-color: rgb(37,147,133);
+    font-weight: bold;
+    color: white
+  }
+  .popopo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+.sittingGirl{
+  margin-top: 70px;
+}
