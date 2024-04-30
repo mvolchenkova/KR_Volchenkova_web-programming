@@ -2,9 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meditation</title>
     <link rel="stylesheet" href="style.css">
+   
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
   </head>
@@ -14,13 +15,27 @@
       <header>
         <div class="head">
           <img src="images_kr/Logo.svg" class="logo">
+          <div class="dropdown heeboFont">
+            <div id="currentLanguage" class="dropbtn">RU</div>
+            <div class="dropdown-content">
+              <a href="#" onclick="changeLanguage('ru')">RU</a>
+              <a href="#" onclick="changeLanguage('en')">EN</a>
+            </div>
+          </div>
+          <label class="switch">
+              <input type="checkbox" id="checkbox">
+              <span class="slider round"></span>
+            </label>
           <div class="links heeboFont linkDiv">
-            <a href="" class="homeLink">Home</a>
-            <a href="" class="headerText">Explore</a>
-            <a href="" class="headerText">Classes</a>
-            <a href="" class="headerText">About Us</a>
-            <a href="" class="headerText">Privacy</a>
-            <a href="" class="headerText">Services</a>
+            <a href="" class="homeLink menuitem">Home</a>
+            <a href="" class="headerText menuitem">Explore</a>
+            <a href="" class="headerText menuitem">Classes</a>
+            <a href="" class="headerText menuitem">About Us</a>
+            <a href="" class="headerText menuitem">Privacy</a>
+            <a href="" class="headerText menuitem">Services</a>
+          </div>
+          <div>
+            <button class="burger"></button>
           </div>
         </div>
         
@@ -54,7 +69,7 @@
         <div class="rect2">
           <img src="images_kr/ic_yoga.png">
           <p class="rectName heeboFont">Yoga</p>
-          <p class="rectText heeboFont"> It has survived not only five centuries, but also the leap into 
+          <p class="rectText heeboFont">It has survived not only five centuries, but also the leap into 
             electronic typesetting, remaining essentially unchanged.</p>
           <button class="learnMoreButton heeboFont">
             Learn More
@@ -63,7 +78,7 @@
         <div class="rect3">
           <img src="images_kr/ic_sound.png">
           <p class="rectName heeboFont">Sound</p>
-          <p class="rectText heeboFont"> It was popularised in the 1960s with the release of Letraset sheets 
+          <p class="rectText heeboFont">It was popularised in the 1960s with the release of Letraset sheets 
             containing Lorem Ipsum passages, and more recently with desktop publishing.</p>
           <button class="learnMoreButton heeboFont">
             Learn More
@@ -72,9 +87,189 @@
       </div>
     </div>
    <div class="thirdContainer">
+    <p class="meriendaFont practiceText">
+      Practice Wherever You
+      Want, Whenever You Need
+    </p>
+    <p class="heeboFont practiceLorem">
+      “These cases are perfectly simple and easy to distinguish. 
+      In a free hour, when our power of choice is untrammelled and when 
+      nothing prevents our being able to do what we like best.”
+    </p>
+    <div class="container3-1">
+      <div class="YogaGirlDiv">
+        <img src="images_kr/YogaGirlVector.svg" class="YogaGirl">
+      </div>
+      <div class="pap">
+        <div class="meditationWind heeboFont">
+          <p class="windText">Meditation Wind</p>
+          <p class="windLorem">There are many variations of passages of Lorem Ipsum available, 
+            but the majority have suffered alteration in some form by injected.</p>
+          <div class="arrow">
+            <img src="images_kr/arrow.png">
+          </div>
+        </div>
+        <div>
+          <div class="stressReduction heeboFont">
+            <p class="stressText">Stress Reduction</p>
+            <p class="stressLorem">Nor again is there anyone who loves or 
+              pursues or desires to obtain pain of itself, because it is pain, 
+              but because occasionally can procure him some great pleasure.</p>
+          </div>
+        </div>
+        <div class="selfComparison heeboFont">
+          <p class="selfText">Self Compassion</p>
+          <p class="selfLorem">It has survived not only five centuries, but also the leap 
+            into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s</p>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="fourthContainer">
+    <div class="breathDiv">
+      <p class="meriendaFont breath">Take a Deep Breath</p>
+      <p class="heeboFont breathLorem">“Neque porro quisquam est, qui dolorem ipsum quia dolor 
+        sit amet, consectetur, adipisci velit, sed quia non numquam 
+        eius modi tempora incidunt ut labore.”</p>
+    </div>
+    <div class="container4-1">
+      <div class="heeboFont cont4-1-1">
+        <div class="music">
+          <div>
+            <p class="musicText1">Turning off Auto Pilot</p>
+            <p class="musicText2">Intriduction, Strees Assesment</p>
+          </div>
+          <div>
+            <img src="images_kr/button_play music.png" class="button_play">
+          </div>
+        </div>
+        <div class="mus1">
+          <div>
+            <p class="musicText1-2">Crazy Wind Sound</p>
+            <p class="musicText2-2">Relex Mind</p>
+          </div>
+          <div>
+            <img src="images_kr/button_play music.png" class="button_play2">
+          </div>
+        </div>
+        <div class="mus1">
+          <div>
+            <p class="musicText1-3">Mental Wellness</p>
+            <p class="musicText2-3">Strees Relief</p>
+          </div>
+          <div>
+            <img src="images_kr/button_play music.png" class="button_play3">
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="images_kr/2girlsVector.svg" class="twogirls">
+      </div>
+    </div>
+   </div>
+   <div class="fifthContainer heeboFont">
+    <div class="breathDiv">
+      <p class="meriendaFont breath">The Best Of Meditation</p>
+      <p class="heeboFont breathLorem">"Lorem ipsum dolor sit amet, consectetur 
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+        magna aliqua.”</p>
+    </div>
+    <div class="qq">
+     <img src="images_kr/Girl3Group.svg" class="girl3">
+     <div class="slid">
+      <div class="slideItem">
+        <p class="slName">The Peace</p>
+        <p class="slDescr">which of us ever undertakes laborious physical exercise, 
+          except to obtain some advantage from it.</p>
+        
+      </div>
+      <div class="slideItem">
+        <p class="slName">Strength Building</p>
+        <p class="slDescr">Et harum quidem rerum facilis est et expedita 
+          distinctio. Nam libero tempore.</p>
+      </div>
+      <div class="slideItem">
+        <p class="slName">Quick Relextion</p>
+        <p class="slDescr">It is a long established fact that a reader will be distracted 
+          by the readable content of a page when looking at its layout.</p>
+      </div>
+      <div class="slideItem">
+        <p class="slName">Relex & Refresh</p>
+        <p class="slDescr">The generated Lorem Ipsum is therefore always 
+          free from repetition, injected humour.</p>
+      </div>
+      <div class="slideItem">
+        <p class="slName">Beauty Of Body</p>
+        <p class="slDescr">Various versions have evolved over the years  sometimes by 
+          accident sometimes on purpose injected humour and the like.</p>
+      </div>
+      <div class="slideItem">
+        <p class="slName">Strees Relief</p>
+        <p class="slDescr">Neque porro quisquam est qui dolorem ipsum quia dolor 
+          sit amet consectetur adipisci velit.</p>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="sixthContainer">
+    <div>
+      <p class="meriendaFont transf">Transform Your Body,
+        Mind and Life Today</p>
+      <p class="heeboFont transfLorem">"At vero eos et accusamus et iusto odio dignissimos 
+        ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti 
+        quos  sint occaecati cupiditate non provident.”</p>
+    </div>
+    <div class="c1 heeboFont">
+      <div class="textGirl1">
+        <img src="images_kr/vectorTw1.png" class="textGirl1Img">
+        <div class="c1-1">
+          <p class="namec1">Antistrees Meditation</p>
+          <p class="descrc1">There are many variations of passages of Lorem Ipsum available, 
+            but the majority have suffered alteration in some form by injected.</p>
+          <p class="descrc1-1">These cases are perfectly simple and easy to distinguish. In a free 
+            hour when our power of choice is untrammelled.</p>
+          <button class="learnMoreButton2">Learn More</button>
+        </div>
+      </div>
+      <div class="textGirl2 heeboFont">
+        <div class="BackyarkDiv">
+          <p class="namec1 namec2">Backyark Band Meditation</p>
+          <p class="descrc1 descrc2">To take a trivial example, which of us ever undertakes laborious 
+            physical exercise except to obtain some advantage from it...</p>
+          <p class="descrc1-1 descrc2-1">The generated Lorem Ipsum is therefore always free from repetition, 
+            injected humour, or non-characteristic words etc.</p>
+          <button class="learnMoreButton2">Learn More</button>
+        </div>
+        <img src="images_kr/vectorTw2.png" class="textGirl2Img">
+      </div>
+    </div>
 
    </div>
     <footer>    
-
+      <div>
+        <div class="logo2">
+        <img src="images_kr/Logo.svg">
+        </div>  
+        <div class="navs heeboFont">
+          <p class="nav1">Home</p>
+          <p>|</p>
+          <p class="nav1">Explore</p>
+          <p>|</p>
+          <p class="nav1">Classes</p>
+          <p>|</p>
+          <p class="nav1">About Us</p>
+          <p>|</p>
+          <p class="nav1">Privacy</p>
+          <p>|</p>
+          <p class="nav1">Services</p>
+        </div>
+        <div class="links2">
+          <img src="images_kr/facebook.png">
+          <img src="images_kr/inst.png">
+          <img src="images_kr/ic_twitter.png">
+        </div>
+      </div>
     </footer>
+    <script src="script.js"></script>
   </body>
