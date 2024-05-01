@@ -1,22 +1,3 @@
-const langArr = {
-  "title" : {
-      "en": "meditation",
-      "ru": "медитация",
-    },
-  "med": {
-    "en": "Meditations Helps You Detoxify Your Body",
-    "ru": "Медитации помогают вам очистить организм от токсинов",
-  },
-  "home": {
-    "en": "Home",
-    "ru": "Главная",
-  },
-  "explore": {
-    "en": "Explore",
-    "ru": "Исследовать",
-  },
-}
-
 const alllang = ['en', 'ru'];
 const select = document.querySelector('select');
 select.addEventListener('change', changeURLLanguage);
@@ -34,6 +15,13 @@ function changeLanguage() {
   document.querySelector('title').innerHTML = langArr['title'][hash];
   document.querySelector('.lng-med').innerHTML = langArr['med'][hash];
   document.querySelector('.lng-home').innerHTML = langArr['home'][hash];
+  document.querySelector('.lng-explore').innerHTML = langArr['explore'][hash];
+  document.querySelector('.lng-about').innerHTML = langArr['about'][hash];
+  document.querySelector('.lng-privacy').innerHTML = langArr['privacy'][hash];
+  document.querySelector('.lng-services').innerHTML = langArr['services'][hash];
+  document.querySelector('.lng-classes').innerHTML = langArr['classes'][hash];
+  document.querySelector('.lng-medLor').innerHTML = langArr['medLor'][hash];
+  document.querySelector('.lng-getStart').innerHTML = langArr['getStart'][hash];
 }
 window.addEventListener('hashchange', changeLanguage);
 
