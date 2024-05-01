@@ -16,7 +16,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   .meriendaFont{
     font-family: "Merienda", cursive;
   }
-
   .burger {
     visibility: hidden;
     position: absolute;
@@ -62,7 +61,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     transform: rotate(-45deg);
     transition: bottom .3s, transform .3s .15s;
   }
- /* Добавьте этот код в ваш файл CSS */
+
 
 .head.night-theme .burger::before,
 .head.night-theme .burger::after {
@@ -165,7 +164,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       background-color: rgb(37,147,133);
 
     }
-    
     input:focus + .slider {
       box-shadow: 0 0 1px rgb(37,147,133);
     }
@@ -176,62 +174,15 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       transform: translateX(26px);
     }
 
-    .dropbtn {
+    .change-lang{
+      width: 60px;
+      height: 30px;
+      font-weight: bold;
+      border-width: 2px;
+      border-radius:20px;
       padding: 5px;
-      cursor: pointer;
-      font-size: 22px;
     }
-  
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-  
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      width: 140px;
-    }
-  
-    .dropbtn {
-      background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
-      padding-left: 25px;
-      width: 50px;
-    }
-  
-    .dropbtn::after {
-      background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
-      content: "";
-      height: 16px;
-      position: absolute;
-      right: 0;
-      top: 12px;
-      width: 20px;
-    }
-  
-    .dropdown-content a:first-child {
-      background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
-    }
-  
-    .dropdown-content a:last-child {
-      background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
-    }
-  
-    .dropdown-content a {
-      color: black;
-      padding: 2px 0 2px 25px;
-      text-decoration: none;
-      display: block;
-    }
-  
-    .dropdown-content a:hover {
-      background-color: #f1f1f1
-    }
-  
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
+
   .logo {
     padding-left: 145px;
     padding-top: 8px;
@@ -288,6 +239,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     justify-content: center;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
   }
   .detoxLorem{
     text-align: center;
@@ -852,6 +804,11 @@ footer{
   justify-content: space-around;
   padding: 30px 280px 0 280px;
 }
+
+/*интернационализация*/
+
+
+
 @media screen and (max-width: 1800px){
   .transf{
     width: 40%;
@@ -922,7 +879,64 @@ footer{
 }
 @media screen and (max-width: 768px){
   .logo{
-    padding: 0 10px 0 30px;
+    padding: 0 10px 0 0px;
+    margin-left: -20px;
+  }
+  .firstContainer {
+    background-position: top; 
+    display: flex;
+    flex-direction: column;
+  }
+  .head {
+    width: 100%;
+    height: 130px;
+  }
+  .Detoxify{
+    width: 80%;
+    line-height: 65px;
+    padding-top: 80px;
+  }
+  .detoxLorem{
+    width: 93%;
+    line-height: 30px;
+    padding-top: 40px;
+  }
+  .getStartButton{
+    margin-top: 50px;
+  }
+  .sittingGirl{
+    margin-top: 43px;
+  }
+  .secondContainer{
+    padding-top: 40px;
+  }
+  .rect2, .rect3{
+    margin-top: -10px;
+  }
+  .thirdContainer{
+    margin-top: 90px;
+  }
+  .practiceText{
+    width: 68%;
+    line-height: 50px;
+  }
+  .practiceLorem{
+    width: 90%;
+    padding-top: 40px;
+  }
+  .YogaGirlDiv{
+    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+  }
+  .container3-1{
+    padding-top: 33px;
+    width: 100%;
+  }
+  .stressReduction, .selfComparison{
+    margin-top: -40px;
+    width: 720px;
   }
 }
 @media screen and (max-width: 320px){

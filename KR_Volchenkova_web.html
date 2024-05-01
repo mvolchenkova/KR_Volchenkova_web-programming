@@ -5,30 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meditation</title>
     <link rel="stylesheet" href="style.css">
-   
+    <link rel="stylesheet" href="authorization.html">
+    <link rel="stylesheet" href="authorization.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
-    
     <div class="firstContainer">
       <header>
         <div class="head">
           <img src="images_kr/Logo.svg" class="logo">
-          <div class="dropdown heeboFont">
-            <div id="currentLanguage" class="dropbtn">RU</div>
-            <div class="dropdown-content">
-              <a href="#" onclick="changeLanguage('ru')">RU</a>
-              <a href="#" onclick="changeLanguage('en')">EN</a>
-            </div>
-          </div>
+          <select class="change-lang heeboFont">
+            <option value="en" selected>EN</option>
+            <option value="ru">RU</option>
+          </select>
           <label class="switch">
               <input type="checkbox" id="checkbox">
               <span class="slider round"></span>
             </label>
           <div class="links heeboFont linkDiv">
-            <a href="" class="homeLink menuitem">Home</a>
-            <a href="" class="headerText menuitem">Explore</a>
+            <a href="" class="homeLink menuitem lng-home">Home</a>
+            <a href="" class="headerText menuitem lng-explore">Explore</a>
             <a href="" class="headerText menuitem">Classes</a>
             <a href="" class="headerText menuitem">About Us</a>
             <a href="" class="headerText menuitem">Privacy</a>
@@ -41,7 +38,7 @@
         
       </header>
       <div class="popopo">
-        <p class="meriendaFont Detoxify">
+        <p class="meriendaFont Detoxify lng-med">
         Meditations Helps You Detoxify Your Body
         </p>
         <p class="detoxLorem heeboFont">
@@ -177,39 +174,45 @@
     </div>
     <div class="qq">
      <img src="images_kr/Girl3Group.svg" class="girl3">
-     <div class="slid">
-      <div class="slideItem">
-        <p class="slName">The Peace</p>
-        <p class="slDescr">which of us ever undertakes laborious physical exercise, 
-          except to obtain some advantage from it.</p>
-        
+
+      <div>
+        <div>
+          <div class="slid">
+            <div class="slideItem">
+              <p class="slName">The Peace</p>
+              <p class="slDescr">which of us ever undertakes laborious physical exercise, 
+                except to obtain some advantage from it.</p>
+            </div>
+            <div class="slideItem">
+              <p class="slName">Strength Building</p>
+              <p class="slDescr">Et harum quidem rerum facilis est et expedita 
+                distinctio. Nam libero tempore.</p>
+            </div>
+            <div class="slideItem">
+              <p class="slName">Quick Relextion</p>
+              <p class="slDescr">It is a long established fact that a reader will be distracted 
+                by the readable content of a page when looking at its layout.</p>
+            </div>
+            <div class="slideItem">
+              <p class="slName">Relex & Refresh</p>
+              <p class="slDescr">The generated Lorem Ipsum is therefore always 
+                free from repetition, injected humour.</p>
+            </div>
+            <div class="slideItem">
+              <p class="slName">Beauty Of Body</p>
+              <p class="slDescr">Various versions have evolved over the years  sometimes by 
+                accident sometimes on purpose injected humour and the like.</p>
+            </div>
+            <div class="slideItem">
+              <p class="slName">Strees Relief</p>
+              <p class="slDescr">Neque porro quisquam est qui dolorem ipsum quia dolor 
+                sit amet consectetur adipisci velit.</p>
+            </div>
+            <a class="previous" onclick="previousSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+           </div>
+        </div>
       </div>
-      <div class="slideItem">
-        <p class="slName">Strength Building</p>
-        <p class="slDescr">Et harum quidem rerum facilis est et expedita 
-          distinctio. Nam libero tempore.</p>
-      </div>
-      <div class="slideItem">
-        <p class="slName">Quick Relextion</p>
-        <p class="slDescr">It is a long established fact that a reader will be distracted 
-          by the readable content of a page when looking at its layout.</p>
-      </div>
-      <div class="slideItem">
-        <p class="slName">Relex & Refresh</p>
-        <p class="slDescr">The generated Lorem Ipsum is therefore always 
-          free from repetition, injected humour.</p>
-      </div>
-      <div class="slideItem">
-        <p class="slName">Beauty Of Body</p>
-        <p class="slDescr">Various versions have evolved over the years  sometimes by 
-          accident sometimes on purpose injected humour and the like.</p>
-      </div>
-      <div class="slideItem">
-        <p class="slName">Strees Relief</p>
-        <p class="slDescr">Neque porro quisquam est qui dolorem ipsum quia dolor 
-          sit amet consectetur adipisci velit.</p>
-      </div>
-     </div>
     </div>
    </div>
    <div class="sixthContainer">

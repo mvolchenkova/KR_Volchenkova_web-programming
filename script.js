@@ -1,3 +1,43 @@
+const langArr = {
+  "title" : {
+      "en": "meditation",
+      "ru": "медитация",
+    },
+  "med": {
+    "en": "Meditations Helps You Detoxify Your Body",
+    "ru": "Медитации помогают вам очистить организм от токсинов",
+  },
+  "home": {
+    "en": "Home",
+    "ru": "Главная",
+  },
+  "explore": {
+    "en": "Explore",
+    "ru": "Исследовать",
+  },
+}
+
+const alllang = ['en', 'ru'];
+const select = document.querySelector('select');
+select.addEventListener('change', changeURLLanguage);
+
+function changeURLLanguage() {
+  let lang = select.value;
+  location.hash = lang; 
+}
+function changeLanguage() {
+  let hash = window.location.hash.substring(1);
+  if(!alllang.includes(hash)){
+    hash = 'en';
+  }
+  select.value = hash;
+  document.querySelector('title').innerHTML = langArr['title'][hash];
+  document.querySelector('.lng-med').innerHTML = langArr['med'][hash];
+  document.querySelector('.lng-home').innerHTML = langArr['home'][hash];
+}
+window.addEventListener('hashchange', changeLanguage);
+
+window.addEventListener('load', changeLanguage);
 let toogle = document.getElementById('checkbox');
 let header = document.querySelector('.head');
 
@@ -62,5 +102,4 @@ const burger = document.querySelector('.burger::after');
 
 burger.addEventListener('click', () => {
   burger.classList.toggle('active');
-});
-
+})
