@@ -16,53 +16,55 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   .meriendaFont{
     font-family: "Merienda", cursive;
   }
-  .burger {
-    visibility: hidden;
-    position: absolute;
-    border: none;
-    left: 0;
-    background: transparent;
-    width: 40px;
-    height: 26px;
+  .burgerMenu {
+    background-color: white;
+    width: 95%;
+    border-radius: 30px;
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-around;
   }
-  .burger::before,
-  .burger::after {
-    content: '';
-    left: 0;
+  .burgerDiv{
     position: absolute;
-    display: block;
+    margin-top: -1000px;
     width: 100%;
-    height: 4px;
-    border-radius: 10px;
-    background: #000;
+    display: flex;
+    align-items:center;
+    justify-content:center ;
+    transition: margin-top 0.5s ease;
   }
-  .burger::before {
-    top: 0;
-    box-shadow: 0 11px 0 #000;
+  .slide-from-top {
+    margin-top:490px !important;
   }
-  .burger::after {
-    bottom: 0;
+  .burgerMenu>div{
+    display: flex;
+    flex-direction: column;
+    border:none;
+    width: 35%;
   }
-
-  .burger::before {
-    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  .burgerMenu>div>button{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border:none;
+    font-size: 2.6em;
+    background-color:rgb(208,244,234);
+    margin: 10px;
+    padding: 10px 40px;
+    border-radius:20px;
+    width: 100%;
   }
-  .burger::after {
-    transition: bottom .3s .15s, transform .3s;
+  .burgerMenu>div{
+    display: flex;
+    align-items:center;
+    justify-content: center;
   }
-  .burger.active::before {
-    top: 11px;
-    transform: rotate(45deg);
-    box-shadow: 0 6px 0 rgba(0,0,0,0);
-    transition: box-shadow .15s, top .3s, transform .3s .15s;
+  .bur{
+    width: 60px;
   }
-  .burger.active::after {
-    bottom: 11px;
-    transform: rotate(-45deg);
-    transition: bottom .3s, transform .3s .15s;
+  .burger{
+    background-color:white;
+    border:none;
+    display: none;
   }
-
-
 .head.night-theme .burger::before,
 .head.night-theme .burger::after {
   background: white;
@@ -98,6 +100,11 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   
   .head.night-theme .headerText {
     color: white;
+  }
+
+  .authorization{
+    position: absolute;
+    background-color:white;
   }
 
   .bg1{
@@ -201,8 +208,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     align-self:center;
   }
   .menudiv{
-    display: flex;
-    visibility: hidden;
+    display: none;
+    
   }
   .headerText{
     color: black;
@@ -625,9 +632,10 @@ margin-top: -15px;
 }
 .slid{
   display: flex;
-  align-items: row;
   margin-left: 50px;
-  overflow: hidden;
+ 
+  width: 100%;
+  transition: all, 0.2s;
 }
 .slName{
   font-size: 2.125em;
@@ -790,6 +798,7 @@ footer{
   font-size: 1.875em;
   justify-content: space-around;
   padding-top: 40px;
+  flex-wrap: wrap;
 }
 .logo2{
   width: 100%;
@@ -801,10 +810,36 @@ footer{
 }
 .links2{
   display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 25px;
+}
+.slidBut{
+  display: flex;
   justify-content: space-around;
-  padding: 30px 280px 0 280px;
+  width: 30%
 }
 
+.qq > div{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.map{
+  width: 50%;
+  height: 400px;
+}
+.mapDiv{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  padding-top: 100px;
+}
+.darkMode header .head {
+  background-color: black;
+}
 /*интернационализация*/
 
 
@@ -828,7 +863,7 @@ footer{
     
   }
   .textGirl1Img, .textGirl2Img{
-    visibility: hidden;
+    display: none;
     position: absolute;
   }
   .textGirl1, .textGirl2{
@@ -851,19 +886,16 @@ footer{
     display: none;
   }
   .menudiv{
-    visibility: visible;
+    display: flex;
   }
   .transf{
     width: 60%;
   }
   .burger {
-    visibility: visible;
     display: block;
     position: relative;
     border: none;
     background: transparent;
-    width: 40px;
-    height: 26px;
   }
   .logo {
     padding-left: 0;
@@ -871,16 +903,71 @@ footer{
   .head{
     justify-content: space-around;
   }
+  .YogaGirlDiv, .twogirls{
+    display: none;
+  }
+  .meditationWind{
+    background-image:none;
+    height: auto;
+    width: auto;
+  }
+  .container3-1{
+    width: 100%;
+  }
+  .container4-1{
+    margin-bottom: 100px;
+    margin-top:0;
+  }
+  .stressReduction, .selfComparison{
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+  .stressText,.stressLorem, .selfText,
+  .selfLorem, .windText, .windLorem{
+    padding-left: 0;
+    width: 100%;
+  }
+  .pap{
+    width: 60%;
+    gap:60px;
+  }
+  .practiceText{
+    width: 60%;
+  }
+  .c1-1, .BackyarkDiv{
+    width: 70%;
+  }
+  .Detoxify{
+    width: 55%;
+  }
 }
 @media screen and (max-width: 1000px){
   .transf{
     width: 75%;
   }
+  .practiceText{
+    width: 70%;
+  }
+  .pap{
+    padding-right: 0;
+  }
+  .logo2{
+    display: none;
+  }
+  .Detoxify{
+    width: 70%;
+  }
 }
 @media screen and (max-width: 768px){
   .logo{
-    padding: 0 10px 0 0px;
-    margin-left: -20px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
   }
   .firstContainer {
     background-position: top; 
@@ -888,24 +975,28 @@ footer{
     flex-direction: column;
   }
   .head {
+    position: relative;
     width: 100%;
     height: 130px;
   }
   .Detoxify{
     width: 80%;
     line-height: 65px;
-    padding-top: 80px;
+    padding-top: 30px;
   }
   .detoxLorem{
     width: 93%;
     line-height: 30px;
-    padding-top: 40px;
+    padding-top: 0;
+    font-size: 1.1em;
   }
   .getStartButton{
     margin-top: 50px;
   }
   .sittingGirl{
     margin-top: 43px;
+    width: 420px;
+    height: 374px;
   }
   .secondContainer{
     padding-top: 40px;
@@ -934,11 +1025,314 @@ footer{
     padding-top: 33px;
     width: 100%;
   }
-  .stressReduction, .selfComparison{
-    margin-top: -40px;
-    width: 720px;
+  .rect1, .rect2, .rect3{
+    background-image:none;
+  }
+  .breath{
+    font-size: 2.5em;
+  }
+  .mus1, .music{
+    background-image:none;
+    width: auto;
+  }
+  .button_play{
+    margin-left: 0;
+  }
+  .button_play2, .button_play3{
+    margin-left: 65px;
+  }
+  .musicText1, .musicText1-2, .musicText1-3,
+  .musicText2, .musicText2-2, .musicText2-3{
+    padding-left: 50px;
+  }
+  .cont4-1-1{
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 670px){
+  .slid, .slidBut{
+    display: none;
+  }
+  .Detoxify{
+    font-size: 2.2em;
+  }
+  .getStartButton{
+    width: 40%;
+    height: 55px;
+    font-size: 1.3em;
+    padding: 17px 0 20px 0;
+  }
+  .rect1>img, .rect2>img, .rect3>img{
+    width: auto;
+    height: auto;
+  }
+  .transf{
+    font-size: 2.5em;
+  }
+  .transfLorem{
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 500px){
+  .sittingGirl{
+    margin-top: 43px;
+    width: 280px;
+    height: 264px;
+  }
+  .Detoxify{
+    font-size: 1.8em;
+    width: 90%;
+  }
+  .breath{
+    line-height: 55px;
+  }
+  .stressText, .selfText{
+    line-height: 40px;
+  }
+  .breathLorem, .windLorem, .stressLorem, .selfLorem{
+    font-size: 1.3em;
+  }
+  footer{
+    margin-top: 50px;
+  }
+  .nav1{
+    font-size: 0.8em;
+  }
+  .musicText1, .musicText1-2, .musicText1-3{
+    font-size: 1.5em;
+    line-height: 30px;
+  }
+  .musicText2, .musicText2-2, .musicText2-3{
+    font-size: 1em;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 400px){
+  .button_play{
+    margin-left: 0;
+  }
+  .button_play2, .button_play3{
+    margin-left: 0;
+  }
+  div>.button_play{
+    display: flex;
+    align-items:center;
+  }
+  .transf{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+  .transfLorem{
+    font-size: 1.1em;
+    width: 90%;
+  }
+  .namec1, .namec2{
+    font-size: 1.5em;
+  }
+  .descrc1, .descrc1-1, .descrc2, .descrc2-1{
+    font-size: 1em;
+    line-height: 24px;
+  }
+  .learnMoreButton2{
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 320px){
+  .girl3{
+    margin-bottom: 0;
+    margin-top: 150px;
+  }
+}
 
+.start{
+  font-size: 5em;
+  font-weight: bolder;
+  padding-bottom: 80px;
+  color: rgb(60, 169, 129);
+}
+div>.start{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.log{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+.logo101{
+  background-color: white;
+  width: 90%;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+}
+.logo10{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  width: 60%;
+}
+div>.logo101{
+  margin-top: 100px;
+  height: 800px;
+  padding-top: 100px;
+  border-radius:50px;
+}
+.registr{
+  margin-top: 50px;
+  border:none;
+  border-radius:30px;
+  width: 100%;
+  height: 150px;
+  font-size: 3.5em;
+}
+input[type="text"],
+input[type="password"]{
+  width: 70%; 
+  height: 100px; 
+  display: block;
+  margin-bottom: 40px;
+  font-size: 3em;
+  border-color:rgb(60, 169, 129);
+  border-width:3px;
+  border-radius:30px;
+  padding: 0 20px 0 20px;
+}
+.form{
+  width: 90%;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+}
+input[type="submit"] {
+  width: 30%;
+  font-size: 3em;
+  border:none;
+  border-radius:30px;
+  padding: 10px;
+}
+.cont{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: 1000px;
+}
+.cont1{
+  background-color:white;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  
+  width: 80%;
+  margin-top: 50px;
+  padding: 100px;
+  border-radius:50px;
+}
+.cont1-1{
+  width: 80%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+.registration{
+  font-size: 5em;
+  color:rgb(60, 169, 129);
+  padding-bottom: 30px;
+  font-weight: bolder;
+}
+.regDiv{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  background-color:white;
+  width: 90%;
+  border-radius:50px;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  margin-bottom: 50px;
+}
+.formreg{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  width: 100%;
+}
+.formDiv{
+  width: 80%;
+}
+.divdiv{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+input[type="Surname"],
+input[type="Name"],
+input[type="Father Name"],
+input[type="Login"]{
+  width: 80%;
+}
+.privacyPolicy{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  font-size: 2.5em;
+}
+.signupbutton{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-top: 50px;
+  border:none;
+  width: 60%;
+}
+.signup{
+  border:none;
+  width: 50%;
+  font-size: 3em;
+  padding: 20px;
+  border-radius:20px;
+
+}
+.radio{
+  transform:scale(2.0);
+  margin: 0 20px 0 0;
+}
+.priv{
+  text-decoration: none;
+  color:rgb(60, 169, 129)
+}
+.policyDiv{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: 80%;
+  background-color:white;
+  flex-direction: column;
+  padding: 50px 100px 50px 100px;
+  border-radius:50px;
+}
+.privDiv{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-top: 50px; 
+}
+.h{
+  font-size: 2.5em;
+  color:rgb(60, 169, 129);
+  font-weight: 600;
+}
+.h1{
+  font-size: 1.3em;
+  font-weight: 600;
 }
