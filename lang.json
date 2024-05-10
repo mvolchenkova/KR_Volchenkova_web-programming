@@ -1,0 +1,266 @@
+{
+    "title" : {
+        "en": "Meditation",
+        "ru": "Mедитация"
+      },
+    "med": {
+      "en": "Meditations Helps You Detoxify Your Body",
+      "ru": "Медитации помогают вам очистить организм от токсинов"
+    },
+    "home": {
+      "en": "Home",
+      "ru": "Главная"
+    },
+    "classes": {
+      "en": "Classes",
+      "ru": "Занятия"
+    },
+    "about": {
+        "en": "About Us",
+        "ru": "О нас"
+      },
+      "privacy": {
+        "en": "Privacy",
+        "ru": "Конфиденциальность"
+      },
+      "services": {
+        "en": "Services",
+        "ru": "Сервисы"
+      },
+      "explore": {
+        "en": "Explore",
+        "ru": "Интересное"
+      },
+      "medLor": {
+        "en": "“It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout point of using Lorem Ipsum is that it has a more-or-less.”",
+        "ru": "“Медитация – искусство умиротворения ума, позволяющее достичь гармонии и внутреннего равновесия. Она помогает освободиться от напряжения и улучшить концентрацию.”"
+      },
+      "getStart": {
+        "en": "Get Start",
+        "ru": "Начать"
+      },
+      "meditation": {
+        "en": "Meditation",
+        "ru": "Медитация"
+      },
+      "meditationLor": {
+        "en": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.",
+        "ru": "В этом мире, где суета и шум захлестывают нас, медитация – наш спасательный круг. Мы погружаемся в свои мысли и отпускаем все лишнее."
+      },
+      "learnMore1": {
+        "en": "Learn More",
+        "ru": "Подробнее"
+      },
+      "learnMore2": {
+        "en": "Learn More",
+        "ru": "Подробнее"
+      },
+      "learnMore3": {
+        "en": "Learn More",
+        "ru": "Подробнее"
+      },
+      "yoga": {
+        "en": "Yoga",
+        "ru": "Йога"
+      },
+      "yogaLor": {
+        "en": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+        "ru": "В этом состоянии мы плаваем в потоке своих мыслей, словно рыбы в прозрачной воде. Наши умы становятся спокойными."
+      },
+      "sound": {
+        "en": "Sound",
+        "ru": "Музыка"
+      },
+      "soundLor": {
+        "en": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing.",
+        "ru": "Мы погружаемся в свои мысли, как рыбы в воду, и отпускаем все лишнее. Наши умы становятся спокойными, а дыхание – ровным и глубоким."
+      },
+      "practice": {
+        "en": "Practice Wherever You Want, Whenever You Need",
+        "ru": "Практикуйтесь где угодно, когда вам нужно"
+      },
+      "practiceLor": {
+        "en": "“These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best.”",
+        "ru": "“Эти случаи совершенно просты и легко различимы. В свободный час, когда наша свобода выбора ничем не ограничена и когда ничто не мешает нам делать то, что нам больше всего нравится.”"
+      },
+      "medWind": {
+        "en": "Meditation Wind",
+        "ru": "Дух медитации"
+      },
+      "medWindLor": {
+        "en": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected.",
+        "ru": "Доступно множество вариаций отрывков Lorem Ipsum. Но большинство из них претерпело изменения в той или иной форме в результате инъекций."
+      },
+      "stress": {
+        "en": "Stress Reduction",
+        "ru": "Снижение стресса"
+      },
+      "stressLor": {
+        "en": "Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally can procure him some great pleasure.",
+        "ru": "И снова нет никого, кто любит или преследует или желает получить боль от себя, потому что это боль, а потому, что иногда может доставить ему большое удовольствие."
+      },
+      "self": {
+        "en": "Self Compassion",
+        "ru": "Самосострадание"
+      },
+      "selfLor": {
+        "en": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s",
+        "ru": "Оно пережило не только пять столетий, но и скачок в электронную верстку, оставшись практически без изменений. Он был популяризирован в 1960-х годах."
+      },
+      "breath": {
+        "en": "Take a Deep Breath",
+        "ru": "Сделайте глубокий вдох"
+      },
+      "breathLor": {
+        "en": "“Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore.”",
+        "ru": "“Нет никого, кто чувствовал бы боль, потому что это боль он хочет, чтобы его преследовали, но потому, что он никогда этого не делает такие времена приходятся на труд”"
+      },
+      "mus1": {
+        "en": "Turning off Auto Pilot",
+        "ru": "Откл. автопилота"
+      },
+      "mus1-1": {
+        "en": "Intriduction, Strees Assesment",
+        "ru": "Введение, Оценка стресса"
+      },
+      "mus2": {
+        "en": "Crazy Wind Sound",
+        "ru": "Музыка ветра"
+      },
+      "mus2-1": {
+        "en": "Relex Mind",
+        "ru": "Расслабь голову"
+      },
+      "mus3": {
+        "en": "Mental Wellness",
+        "ru": "Псих. здоровье"
+      },
+      "mus3-1": {
+        "en": "Strees Relief",
+        "ru": "Снятие стресса"
+      },
+      "best": {
+        "en": "The Best Of Meditation",
+        "ru": "Лучшее из медитации"
+      },
+      "bestLor": {
+        "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "ru": "Я изучаю образование, но делаю то же самое одновременно с трудом и болью.некоторые замечательные вещи"
+      },
+      "peace": {
+        "en": "The Peace",
+        "ru": "Мир"
+      },
+      "peaceLor": {
+        "en": "which of us ever undertakes laborious physical exercise, except to obtain some advantage from it.",
+        "ru": "кто из нас когда-либо предпринимал тяжелые физические упражнения, кроме как получить от этого какую-то выгоду."
+      },
+      "strength": {
+        "en": "Strength Building",
+        "ru": "Развитие силы"
+      },
+      "strengthLor": {
+        "en": "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore.",
+        "ru": "И действительно, из всего этого легко и различие Для свободного времени."
+      },
+      "relex": {
+        "en": "Quick Relextion",
+        "ru": "Быстрое расслабление"
+      },
+      "relexLor": {
+        "en": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "ru": "Давно установленo, что читатель будет отвлекаться по читаемому содержимому страницы при взгляде на ее макет."
+      },
+      "refresh": {
+        "en": "Relex & Refresh",
+        "ru": "Релaкс и обновление"
+      },
+      "refreshLor": {
+        "en": "The generated Lorem Ipsum is therefore always free from repetition, injected humour.",
+        "ru": "Таким образом, сгенерированный Lorem Ipsum всегда без повторов, с добавлением юмора."
+      },
+      "beauty": {
+        "en": "Beauty Of Body",
+        "ru": "Красота тела"
+      },
+      "beautyLor": {
+        "en": "Various versions have evolved over the years  sometimes by accident sometimes on purpose injected humour and the like.",
+        "ru": "Различные версии развивались на протяжении многих лет, иногда случайно впрыскивают юмор и тому подобное."
+      },
+      "relief": {
+        "en": "Strees Relief",
+        "ru": "Снятие стресса"
+      },
+      "reliefLor": {
+        "en": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit.",
+        "ru": "Более того, нет никого, кто чувствовал бы боль саму по себе, потому что это боль."
+      },
+      "transf": {
+        "en": "Transform Your Body, Mind and Life Today",
+        "ru": "Преобразите свое тело, разум и жизнь сегодня"
+      },
+      "transfLor": {
+        "en": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos sint occaecati cupiditate non provident.",
+        "ru": "Но ведь мы оба обвиняем их и заслуживаем справедливой ненависти. мы ведем тех, кто размягчился и развратился лестью нынешних удовольствий они не обеспечивают."
+      },
+      "anti": {
+        "en": "Antistrees Meditation",
+        "ru": "Антистрессовая медитация"
+      },
+      "anti1": {
+        "en": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form by injected.",
+        "ru": "Доступно множество вариаций отрывков Lorem Ipsum. но большинство из них в той или иной форме претерпели изменения в результате инъекции."
+      },
+      "anti2": {
+        "en": "These cases are perfectly simple and easy to distinguish. In a free hour when our power of choice is untrammelled.",
+        "ru": "Эти случаи совершенно просты и легко различимы. В бесплатном час, когда наша сила выбора ничем не ограничена."
+      },
+      "learnMore4": {
+        "en": "Learn More",
+        "ru": "Подробнее"
+      },
+      "back": {
+        "en": "Backyark Band Meditation",
+        "ru": "Медитация на заднем дворе"
+      },
+      "back1": {
+        "en": "To take a trivial example, which of us ever undertakes laborious physical exercise except to obtain some advantage from it...",
+        "ru": "Возьмем тривиальный пример: кто из нас когда-либо берётся за кропотливую работу? физические упражнения"
+      },
+      "back2": {
+        "en": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+        "ru": "Таким образом, сгенерированный Lorem Ipsum всегда свободен от повторений. инъецированный юмор, или нехарактерные слова "
+      },
+      "learnMore5": {
+        "en": "Learn More",
+        "ru": "Подробнее"
+      },
+      "home2": {
+        "en": "Home",
+        "ru": "Главная"
+      },
+      "classes2": {
+        "en": "Classes",
+        "ru": "Занятия"
+      },
+      "about2": {
+          "en": "About Us",
+          "ru": "О нас"
+        },
+        "privacy2": {
+          "en": "Privacy",
+          "ru": "Конфиденциальность"
+        },
+        "services2": {
+          "en": "Services",
+          "ru": "Сервисы"
+        },
+        "explore2": {
+          "en": "Explore",
+          "ru": "Интересное"
+        },
+        "start": {
+          "en": "Start meditation",
+          "ru": "Начать медитировать"
+        }
+  }
