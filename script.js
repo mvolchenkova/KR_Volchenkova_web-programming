@@ -8,6 +8,31 @@ burger.addEventListener('click', function() {
     burgerDiv.classList.add('slide-from-top');
   }
 });
+let haveAccBut = document.querySelector('.haveAccBut');
+let authReg = document.querySelector('.authRegDiv');
+let getStartButton = document.querySelector('.getStartButton');
+let auth = document.querySelector('.authorization');
+getStartButton.addEventListener('click', function(){
+  if (authReg.classList.contains('slide-from-left')) {
+    authReg.classList.remove('slide-from-left');
+  } else {
+    authReg.classList.add('slide-from-left');
+  }
+})
+let authRegDiv = document.querySelector('.authRegDiv');
+let authorizationDiv = document.querySelector('.authorizationDiv');
+
+haveAccBut.addEventListener('click', function() {
+  authReg.classList.remove('slide-from-left');
+    authorizationDiv.style.marginLeft = '0';
+});
+let reg = document.querySelector('.regDiv');
+let regBut = document.querySelector('.regBut');
+
+regBut.addEventListener('click', function(){
+  authReg.classList.remove('slide-from-left');
+    reg.style.marginLeft = '0';
+})
 const alllang = ['en', 'ru'];
 const select = document.querySelector('select');
 select.addEventListener('change', changeURLLanguage);
@@ -104,6 +129,20 @@ const breathElement = document.querySelector('.breath');
 const breathLoremElement = document.querySelector('.breathLorem');
 const musicText1Elements = document.querySelectorAll('.musicText1, .musicText1-2, .musicText1-3');
 const musicText2Elements = document.querySelectorAll('.musicText2, .musicText2-2, .musicText2-3');
+const transf = document.querySelector('.transf');
+const transfLorem = document.querySelector('.transfLorem');
+const namec1 = document.querySelector('.namec1');
+const descrc1 = document.querySelector('.descrc1');
+const descrc11 = document.querySelector('.descrc1-1');
+const namec2 = document.querySelector('.namec2');
+const descrc2 = document.querySelector('.descrc2');
+const descrc21 = document.querySelector('.descrc2-1');
+const navs  = document.querySelector('.navs');
+const headerText = document.querySelector('.headerText');
+const lngClasses = document.querySelector('.lng-classes');
+const lngAbout = document.querySelector('.lng-about');
+const lngPrivacy = document.querySelector('.lng-privacy');
+const lngServices = document.querySelector('.lng-services');
 
 toggle.addEventListener('click', toggleDarkMode);
 
@@ -127,6 +166,11 @@ function enableDarkMode() {
   breathElement.style.color = 'white';
   breathLoremElement.style.color = 'white';
   burgerMenu.style = 'background-color: black ';
+  headerText.style.color = 'white'; 
+  lngClasses.style.color = 'white';
+  lngAbout.style.color = 'white';
+  lngPrivacy.style.color = 'white';
+  lngServices.style.color = 'white';
   burger.style = 'background-color: white; border-radius: 10px';
   musicText1Elements.forEach((element) => {
     element.style.color = 'black';
@@ -138,6 +182,12 @@ function enableDarkMode() {
   meditationWindTextElements.forEach((element) => {
     element.style.color = 'white';
   });
+    const whiteTextElements = document.querySelectorAll('.transf, .transfLorem, .namec1, .descrc1, .descrc1-1, .namec2, .descrc2, .descrc2-1, .navs, .resetButton');
+
+    whiteTextElements.forEach((element) => {
+      element.style.color = 'white';
+    });
+  
   localStorage.setItem('theme', 'dark');
   toggle.checked = true;
 }
@@ -148,6 +198,12 @@ function disableDarkMode() {
   breathElement.style.color = '';
   breathLoremElement.style.color = '';
   burgerMenu.style = '';
+  headerText.style.color = ''; 
+  lngClasses.style.color = '';
+  lngAbout.style.color = '';
+  lngPrivacy.style.color = '';
+  lngServices.style.color = '';
+
   musicText1Elements.forEach((element) => {
     element.style.color = '';
   });
@@ -158,6 +214,12 @@ function disableDarkMode() {
   meditationWindTextElements.forEach((element) => {
     element.style.color = '';
   });
+    const whiteTextElements = document.querySelectorAll('.transf, .transfLorem, .namec1, .descrc1, .descrc1-1, .namec2, .descrc2, .descrc2-1, .navs,.resetButton');
+
+    whiteTextElements.forEach((element) => {
+      element.style.color = 'black';
+    });
+  
   localStorage.setItem('theme', 'light');
 }
 let slid1 = document.getElementById("slid1");
@@ -209,3 +271,171 @@ function validateForm() {
   return true;
 }
 
+let resetButton = document.querySelector('.resetButton');
+
+resetButton.addEventListener('click', function() {
+  localStorage.clear();
+  disableDarkMode();
+  toggle.checked = false;
+});
+
+// Получаем ссылку на checkbox
+let agreeCheckbox = document.getElementById('agreeCheckbox');
+
+// Добавляем обработчик события, чтобы проверять состояние checkbox'а
+agreeCheckbox.addEventListener('change', function() {
+  if (agreeCheckbox.checked) {
+    // Checkbox отмечен
+    // Ваш код, который выполняется при согласии пользователя
+  } else {
+    // Checkbox не отмечен
+    // Ваш код, который выполняется при отказе пользователя
+  }
+});
+
+//REGISTRATION
+// Получаем ссылку на форму регистрации
+let registrationForm = document.getElementById('formregistr');
+
+// Получаем ссылки на все поля формы
+let surnameInput = registrationForm.querySelector('input[placeholder="Surname"]');
+let nameInput = registrationForm.querySelector('input[placeholder="Name"]');
+let fatherNameInput = registrationForm.querySelector('input[placeholder="Father Name"]');
+let mobilePhoneInput = registrationForm.querySelector('input[placeholder="Mobile phone"]');
+let emailInput = registrationForm.querySelector('input[placeholder="E-mail"]');
+let birthDateInput = registrationForm.querySelector('input[placeholder="Birth date"]');
+let passwordInput = registrationForm.querySelector('input[placeholder="Create a password"]');
+let repeatPasswordInput = registrationForm.querySelector('input[placeholder="Repeat a password"]');
+
+
+// Добавляем обработчик события при отправке формы
+registrationForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Отменяем отправку формы по умолчанию
+
+  // Проверяем заполнение обязательных полей
+  if (
+    surnameInput.value === '' ||
+    nameInput.value === '' ||
+    mobilePhoneInput.value === '' ||
+    emailInput.value === '' ||
+    birthDateInput.value === '' ||
+    passwordInput.value === '' ||
+    repeatPasswordInput.value === '' ||
+    !agreeCheckbox.checked
+  ) {
+    // Если хотя бы одно обязательное поле не заполнено или checkbox не отмечен, добавляем текстовое сообщение об ошибке
+    showErrorMessage();
+  } else {
+    // Если все обязательные поля заполнены и checkbox отмечен, генерируем имя пользователя
+    generateUsername();
+  }
+});
+
+// Функция для добавления текстового сообщения об ошибке
+function showErrorMessage() {
+  let requiredFields = [
+    { input: surnameInput, placeholder: 'Surname' },
+    { input: nameInput, placeholder: 'Name' },
+    { input: mobilePhoneInput, placeholder: 'Mobile phone' },
+    { input: emailInput, placeholder: 'E-mail' },
+    { input: birthDateInput, placeholder: 'Birth date' },
+    { input: passwordInput, placeholder: 'Create a password' },
+    { input: repeatPasswordInput, placeholder: 'Repeat a password' },
+  ];
+
+    for (let field of requiredFields) {
+      if (field.input.value === '') {
+        let errorMessage = document.createElement('span');
+        errorMessage.style.color = 'red';
+        errorMessage.classList.add('error-message');
+        errorMessage.textContent = `Please enter ${field.placeholder}`;
+        field.input.insertAdjacentElement('afterend', errorMessage);
+      } else {
+        removeErrorMessage(field.input);
+      }
+    }
+    requiredFields.forEach(field => {
+      field.input.addEventListener('input', function() {
+        // Если в поле есть текст, удаляем сообщение об ошибке
+        if (field.input.value !== '') {
+          removeErrorMessage(field.input);
+        }
+      });
+    });
+  }
+
+function removeErrorMessage(input) {
+  let errorMessage = input.nextElementSibling;
+  if (errorMessage && errorMessage.classList.contains('error-message')) {
+    errorMessage.remove();
+  }
+}
+
+// Функция для генерации имени пользователя
+function generateUsername() {
+  // Генерируем имя пользователя 5 раз
+  let generatedUsernames = [];
+  for (let i = 0; i < 5; i++) {
+    let username = generateRandomUsername();
+    generatedUsernames.push(username);
+  }
+
+  // Предлагаем пользователю выбрать одно из сгенерированных имен пользователя
+  let chosenUsername = prompt('Choose a username:', generatedUsernames.join('\n'));
+  if (chosenUsername && generatedUsernames.includes(chosenUsername)) {
+    // Пользователь выбрал одно из сгенерированных имен пользователя
+    // Выполняем дальнейшие действия, например, отправляем форму
+    registrationForm.submit();
+  } else {
+    // Пользователь не выбрал сгенерированное имя пользователя
+    // Можно выполнить необходимые действия или вывести сообщение об ошибке
+  }
+}
+
+// Функция для генерации случайного имени пользователя
+function generateRandomUsername() {
+  let characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+  let usernameLength = 8;
+  let randomUsername = '';
+
+  for (let i = 0; i < usernameLength; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    randomUsername += characters[randomIndex];
+  }
+
+  return randomUsername;
+}
+const secondCont = document.querySelector('.secondContainer');
+const thirdCont = document.querySelector('.thirdContainer');
+const fifthCont = document.querySelector('.fifthContainer');
+const Login = document.querySelector('.loginButton'); 
+Login.addEventListener('click', function(){ 
+  let logup = document.getElementById("Logup").value; 
+  let userpassword = document.getElementById("PasswordLog").value; 
+  username = logup; 
+  password = userpassword 
+ let url = 'logins.json'; 
+ fetch(url) 
+ .then(response => response.json()) 
+ .then(result => { for(let element of result){ 
+  if(element.login == username && element.password == password){ 
+    window.location = 'KR_Volchenkova_web.html'; 
+  } 
+  else{ 
+    alert('лох') 
+  } 
+ }}); 
+});
+
+let exit1 = document.querySelector('.exit1');
+let exit2 = document.querySelector('.exit2');
+let exit3 = document.querySelector('.exit3');
+exit1.addEventListener('click', function(){
+  authReg.classList.remove('slide-from-left');
+});
+exit2.addEventListener('click', function(){
+  authorizationDiv.style.marginLeft = '-2000px';
+});
+exit3.addEventListener('click', function(){
+  reg.style.marginLeft = '-4000px';
+});

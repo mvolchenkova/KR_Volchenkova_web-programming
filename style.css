@@ -23,8 +23,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding: 30px 0 30px 0;
     display: flex;
     justify-content: space-around;
-  }
-  .burgerDiv{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+      .burgerDiv{
     position: absolute;
     margin-top: -1000px;
     width: 100%;
@@ -36,6 +37,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   .slide-from-top {
     margin-top:490px !important;
   }
+  
   .burgerMenu>div{
     display: flex;
     flex-direction: column;
@@ -101,12 +103,91 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   .head.night-theme .headerText {
     color: white;
   }
-
-  .authorization{
+ 
+  .slide-from-left {
+    margin-left:0px !important;
+  }
+  .authRegDiv{
     position: absolute;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-left: -2000px;
+    transition: margin-left 0.5s ease;
+    
+  }
+.authReg{
+  width: 80%;
     background-color:white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius:50px;
+    padding-bottom:50px;
+    padding-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.regBut, .haveAccBut{
+border:none;
+width: 70%;
+margin:10px;
+height: 50px;
+font-size: 2em;
+border-radius: 15px
+}
+  .authorizationDiv{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-left: -3000px;
+    transition: margin-left 0.5s ease;
+    margin-top: 5px
+  }
+  .authorization{
+    width: 80%;
+    background-color:white;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius:50px;
+    padding-bottom:50px;
+    padding-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 
+.formAuthoriz{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+.authLab{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+}
+.authLab>label{
+  font-size: 2.2em;
+}
+form>b{
+  font-size: 3em;
+  padding: 20px;
+}
+.loginButton{
+  border:solid 1px;
+  border-radius:10px;
+  padding: 10px;
+  background-color:transparent;
+  font-size: 2.5em;
+  margin-top: 30px;
+}
   .bg1{
     position: absolute;
     top: 0;
@@ -277,7 +358,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin-top: 70px;
 }
 .secondContainer {
-  display: flex;
+  display: none;
   justify-content: center;
   padding-top: 93px;
 }
@@ -355,7 +436,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background-color: #000000;
 }
 .thirdContainer{
-  display: flex;
+  display: none;
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -602,7 +683,7 @@ margin-top: -15px;
   margin-top: -50px;
   height: 1185px;
   padding-top: 130px;
-  display: flex;
+  display:none;
   flex-direction: column;
   background-position: center;
   background-image: url("./images_kr/Background3.svg")
@@ -636,6 +717,17 @@ margin-top: -15px;
  
   width: 100%;
   transition: all, 0.2s;
+}
+#slid1,#slid2{
+  background-color:transparent;
+  border: solid 2px;
+  width: 70px;
+  height: 40px;
+  font-size: 2em;
+  border-radius:10px;
+}
+.slidBut{
+  margin-bottom: 20px;
 }
 .slName{
   font-size: 2.125em;
@@ -839,6 +931,11 @@ footer{
 }
 .darkMode header .head {
   background-color: black;
+}
+.resetButton{
+  border:none;
+  background-color:transparent;
+  font-size: 1em;
 }
 /*интернационализация*/
 
@@ -1095,7 +1192,7 @@ footer{
   footer{
     margin-top: 50px;
   }
-  .nav1{
+  .nav1, .resetButton{
     font-size: 0.8em;
   }
   .musicText1, .musicText1-2, .musicText1-3{
@@ -1192,22 +1289,16 @@ div>.logo101{
 }
 input[type="text"],
 input[type="password"]{
-  width: 70%; 
-  height: 100px; 
+  width: 80%; 
+  height: 50px; 
   display: block;
-  margin-bottom: 40px;
-  font-size: 3em;
-  border-color:rgb(60, 169, 129);
+  margin-top: 40px;
+  font-size: 1.8em;
   border-width:3px;
-  border-radius:30px;
+  border-radius:15px;
   padding: 0 20px 0 20px;
 }
-.form{
-  width: 90%;
-  display: flex;
-  align-items:center;
-  flex-direction: column;
-}
+
 input[type="submit"] {
   width: 30%;
   font-size: 3em;
@@ -1240,23 +1331,68 @@ input[type="submit"] {
   flex-direction: column;
 }
 .registration{
-  font-size: 5em;
-  color:rgb(60, 169, 129);
   padding-bottom: 30px;
   font-weight: bolder;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  
+}
+
+#formregistr{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#formregistr>b{
+  padding-bottom: 0;
+}
+#formregistr>p{
+  padding-bottom: 20px;
+  font-size: 1.3em;
+  width: 80%;
+  text-align: center;
+}
+#registrateBut{
+  border:solid 1px;
+  border-radius:10px;
+  padding: 10px;
+  background-color:transparent;
+  font-size: 2.5em;
+  margin-top: 30px;
+}
+#agreeCheckbox {
+  width: 30px;
+  height: 30px;
+}
+.checkboxText{
+  font-size: 1.6em;
+}
+.formDiv2{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:90%;
 }
 .regDiv{
+  position: absolute;
   display: flex;
   align-items:center;
   justify-content: center;
   flex-direction: column;
   background-color:white;
-  width: 90%;
+  width: 80%;
   border-radius:50px;
-  margin-top: 50px;
+  top:130px;
   padding-top: 50px;
-  padding-bottom: 80px;
-  margin-bottom: 50px;
+  margin-left: -4000px;
+  transition: margin-left 0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.regDivBig{
+  display: flex;
+  align-items:center;
+  justify-content: center;
 }
 .formreg{
   width: fit-content;
@@ -1335,4 +1471,16 @@ input[type="Login"]{
 .h1{
   font-size: 1.3em;
   font-weight: 600;
+}
+.exit1, .exit2, .exit3{
+  color:red;
+  font-size: 3em;
+  border: none;
+  background-color:transparent;
+}
+.exitDiv{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-right: 100px;
 }

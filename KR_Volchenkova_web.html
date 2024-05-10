@@ -36,32 +36,82 @@
           </div>
           <div class="burgerDiv">
             <div class="burgerMenu">
-            <div>
-              <button class="heeboFont">Home</button>
-              <button class="heeboFont">Explore</button>
-              <button class="heeboFont">Classes</button>
+              <div>
+                <button class="heeboFont">Home</button>
+                <button class="heeboFont">Explore</button>
+                <button class="heeboFont">Classes</button>
+              </div>
+              <div>
+                <button class="heeboFont">About Us</button>
+                <button class="heeboFont">Privacy</button>
+                <button class="heeboFont">Services</button>
+              </div>
             </div>
-            <div>
-              <button class="heeboFont">About Us</button>
-              <button class="heeboFont">Privacy</button>
-              <button class="heeboFont">Services</button>
-            </div>
-          </div>
-          <div class="authorization">
-            <div>
-              <form action="">
-                <b>Log In</b>
-                <div>
-                  <label for="">Login</label>
-                  <input type="text">
-                  <label for="">Password</label>
-                  <input type="password">
-                </div>
-              </form>
-            </div>
-          </div>
+            
           </div>
         </div>
+        <div class="authRegDiv heeboFont">
+          <div class="authReg">
+            <div class="exitDiv">
+              <button class="exit1">
+              X
+              </button>
+            </div>
+            <p style="font-size: 2.5em; font-weight: bold;">Get start</p>
+            <button class="regBut">Registration</button>
+            <button class="haveAccBut">Have account</button>
+          </div>
+        </div>
+        <div class="authorizationDiv heeboFont">
+              <div class="authorization">
+                <div class="exitDiv">
+                  <button class="exit2">
+                  X
+                  </button>
+                </div>
+                <form action="" class="formAuthoriz">
+                  <b>Authorization</b>
+                  <div class="authLab">
+                    <label for="">Login</label>
+                    <input type="text" placeholder="Login" id="Logup">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Password" id="PasswordLog">
+                  </div>
+                  <button class="loginButton">Log In</button>
+                </form>
+              </div>
+        </div>
+        <div class="regDivBig">
+          <div class="heebofont regDiv">
+            <div class="exitDiv">
+              <button class="exit3">
+              X
+              </button>
+            </div>
+            <div class="registration">
+              <form action="" id="formregistr">
+                <b class="heeboFont">Registration</b>
+                <div class="formDiv2">
+                  <input type="text" placeholder="Surname">
+                  <input type="text" placeholder="Name">
+                  <input type="text" placeholder="Father Name">
+                  <input type="text" placeholder="Mobile phone">
+                  <input type="text" placeholder="E-mail">
+                  <input type="text" placeholder="Birth date">
+                  <input type="text" placeholder="Username">
+                  <input type="text" placeholder="Create a password">
+                  <input type="text" placeholder="Repeat a password">
+                </div>
+                <label class="checkboxText heeboFont">
+                  <input type="checkbox" id="agreeCheckbox">
+                  I agree to the <a href="">terms of the user agreement</a>
+                </label>
+                <button id="registrateBut">Create account</button>
+              </form>
+          </div>
+        </div>
+      </div>
+        
       </header>
       <div class="popopo">
         <p class="meriendaFont Detoxify lng-med">
@@ -204,10 +254,10 @@
       <div>
           <div class="slidBut">
             <button id="slid1">
-              
+              <
             </button>
             <button id="slid2">
-
+              >
             </button>
           </div>
           <div class="slid">
@@ -298,6 +348,8 @@
           <p class="nav1 lng-privacy2">Privacy</p>
           <p>|</p>
           <p class="nav1 lng-services2">Services</p>
+          <p>|</p>
+          <button class="resetButton heeboFont">Reset settings</button>
         </div>
         <div class="links2">
           <img src="images_kr/facebook.png">
@@ -308,6 +360,6 @@
     </footer>
     <script src="script.js"></script>
     <script src="lang.js"></script>
-    
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+  
   </body>
