@@ -33,92 +33,6 @@ regBut.addEventListener('click', function(){
   authReg.classList.remove('slide-from-left');
     reg.style.marginLeft = '0';
 })
-const alllang = ['en', 'ru'];
-const select = document.querySelector('select');
-select.addEventListener('change', changeURLLanguage);
-
-function changeURLLanguage() {
-  let lang = select.value;
-  localStorage.setItem('lang', lang);
-  changeLanguage();
-}
-
-function changeLanguage() {
-  let lang = localStorage.getItem('lang');
-  if (!alllang.includes(lang)) {
-    lang = 'en';
-  }
-  select.value = lang;
-  document.querySelector('title').innerHTML = langArr['title'][hash];
-  document.querySelector('.lng-med').innerHTML = langArr['med'][hash];
-  document.querySelector('.lng-home').innerHTML = langArr['home'][hash];
-  document.querySelector('.lng-explore').innerHTML = langArr['explore'][hash];
-  document.querySelector('.lng-about').innerHTML = langArr['about'][hash];
-  document.querySelector('.lng-privacy').innerHTML = langArr['privacy'][hash];
-  document.querySelector('.lng-services').innerHTML = langArr['services'][hash];
-  document.querySelector('.lng-classes').innerHTML = langArr['classes'][hash];
-  document.querySelector('.lng-medLor').innerHTML = langArr['medLor'][hash];
-  document.querySelector('.lng-getStart').innerHTML = langArr['getStart'][hash];
-  document.querySelector('.lng-meditation').innerHTML = langArr['meditation'][hash];
-  document.querySelector('.lng-meditationLor').innerHTML = langArr['meditationLor'][hash];
-  document.querySelector('.lng-learnMore1').innerHTML = langArr['learnMore1'][hash];
-  document.querySelector('.lng-learnMore2').innerHTML = langArr['learnMore2'][hash];
-  document.querySelector('.lng-learnMore3').innerHTML = langArr['learnMore3'][hash];
-  document.querySelector('.lng-yoga').innerHTML = langArr['yoga'][hash];
-  document.querySelector('.lng-yogaLor').innerHTML = langArr['yogaLor'][hash];
-  document.querySelector('.lng-sound').innerHTML = langArr['sound'][hash];
-  document.querySelector('.lng-soundLor').innerHTML = langArr['soundLor'][hash];
-  document.querySelector('.lng-practice').innerHTML = langArr['practice'][hash];
-  document.querySelector('.lng-practiceLor').innerHTML = langArr['practiceLor'][hash];
-  document.querySelector('.lng-medWind').innerHTML = langArr['medWind'][hash];
-  document.querySelector('.lng-medWindLor').innerHTML = langArr['medWindLor'][hash];
-  document.querySelector('.lng-stress').innerHTML = langArr['stress'][hash];
-  document.querySelector('.lng-stressLor').innerHTML = langArr['stressLor'][hash];
-  document.querySelector('.lng-self').innerHTML = langArr['self'][hash];
-  document.querySelector('.lng-selfLor').innerHTML = langArr['selfLor'][hash];
-  document.querySelector('.lng-breath').innerHTML = langArr['breath'][hash];
-  document.querySelector('.lng-breathLor').innerHTML = langArr['breathLor'][hash];
-  document.querySelector('.lng-mus1').innerHTML = langArr['mus1'][hash];
-  document.querySelector('.lng-mus1-1').innerHTML = langArr['mus1-1'][hash];
-  document.querySelector('.lng-mus2').innerHTML = langArr['mus2'][hash];
-  document.querySelector('.lng-mus2-1').innerHTML = langArr['mus2-1'][hash];
-  document.querySelector('.lng-mus3').innerHTML = langArr['mus3'][hash];
-  document.querySelector('.lng-mus3-1').innerHTML = langArr['mus3-1'][hash];
-  document.querySelector('.lng-best').innerHTML = langArr['best'][hash];
-  document.querySelector('.lng-bestLor').innerHTML = langArr['bestLor'][hash];
-  document.querySelector('.lng-peace').innerHTML = langArr['peace'][hash];
-  document.querySelector('.lng-peaceLor').innerHTML = langArr['peaceLor'][hash];
-  document.querySelector('.lng-strength').innerHTML = langArr['strength'][hash];
-  document.querySelector('.lng-strengthLor').innerHTML = langArr['strengthLor'][hash];
-  document.querySelector('.lng-relex').innerHTML = langArr['relex'][hash];
-  document.querySelector('.lng-relexLor').innerHTML = langArr['relexLor'][hash];
-  document.querySelector('.lng-refresh').innerHTML = langArr['refresh'][hash];
-  document.querySelector('.lng-refreshLor').innerHTML = langArr['refreshLor'][hash];
-  document.querySelector('.lng-beauty').innerHTML = langArr['beauty'][hash];
-  document.querySelector('.lng-beautyLor').innerHTML = langArr['beautyLor'][hash];
-  document.querySelector('.lng-relief').innerHTML = langArr['relief'][hash];
-  document.querySelector('.lng-reliefLor').innerHTML = langArr['reliefLor'][hash];
-  document.querySelector('.lng-transf').innerHTML = langArr['transf'][hash];
-  document.querySelector('.lng-transfLor').innerHTML = langArr['transfLor'][hash];
-  document.querySelector('.lng-anti').innerHTML = langArr['anti'][hash];
-  document.querySelector('.lng-anti1').innerHTML = langArr['anti1'][hash];
-  document.querySelector('.lng-anti2').innerHTML = langArr['anti2'][hash];
-  document.querySelector('.lng-learnMore4').innerHTML = langArr['learnMore4'][hash];
-  document.querySelector('.lng-back').innerHTML = langArr['back'][hash];
-  document.querySelector('.lng-back1').innerHTML = langArr['back1'][hash];
-  document.querySelector('.lng-back2').innerHTML = langArr['back2'][hash];
-  document.querySelector('.lng-learnMore5').innerHTML = langArr['learnMore5'][hash];
-  document.querySelector('.lng-home2').innerHTML = langArr['home2'][hash];
-  document.querySelector('.lng-explore2').innerHTML = langArr['explore2'][hash];
-  document.querySelector('.lng-about2').innerHTML = langArr['about2'][hash];
-  document.querySelector('.lng-privacy2').innerHTML = langArr['privacy2'][hash];
-  document.querySelector('.lng-services2').innerHTML = langArr['services2'][hash];
-  document.querySelector('.lng-classes2').innerHTML = langArr['classes2'][hash];
-  document.querySelector('.lng-start').innerHTML = langArr['start'][hash];
-
-}
-
-window.addEventListener('load', changeLanguage);
 
 const burgerMenu = document.querySelector('.burgerMenu');
 const toggle = document.getElementById('checkbox');
@@ -139,11 +53,21 @@ const descrc2 = document.querySelector('.descrc2');
 const descrc21 = document.querySelector('.descrc2-1');
 const navs  = document.querySelector('.navs');
 const headerText = document.querySelector('.headerText');
-const lngClasses = document.querySelector('.lng-classes');
-const lngAbout = document.querySelector('.lng-about');
-const lngPrivacy = document.querySelector('.lng-privacy');
-const lngServices = document.querySelector('.lng-services');
-
+const lngClasses = document.querySelector('.classes1');
+const lngAbout = document.querySelector('.about1');
+const lngPrivacy = document.querySelector('.privacy1');
+const lngServices = document.querySelector('.services1');
+const authR = document.querySelector('.authReg');
+const getSt = document.querySelector('.getStart');
+const authorizationNight = document.querySelector('.authorization');
+const authNight = document.getElementById('auth');
+const label1 = document.getElementById('label1');
+const label2 = document.getElementById('label2');
+const loginButton = document.querySelector('.loginButton');
+const regId = document.querySelector('.regId');
+const chekText = document.querySelector('.checkboxText');
+const registrateBut = document.getElementById('registrateBut');
+const logOut = document.querySelector('.logOut');
 toggle.addEventListener('click', toggleDarkMode);
 
 // Check if the current theme is stored in the local storage
@@ -158,7 +82,6 @@ function toggleDarkMode() {
     enableDarkMode();
   }
 }
-
 function enableDarkMode() {
   bodyElement.classList.add('darkMode');
   header.classList.add('darkMode');
@@ -167,10 +90,23 @@ function enableDarkMode() {
   breathLoremElement.style.color = 'white';
   burgerMenu.style = 'background-color: black ';
   headerText.style.color = 'white'; 
+  logOut.style.color = 'white';
   lngClasses.style.color = 'white';
   lngAbout.style.color = 'white';
   lngPrivacy.style.color = 'white';
   lngServices.style.color = 'white';
+  authR.style = 'background-color: black';
+  getSt.style.color = 'white';
+  authorizationNight.style = 'background-color: black';
+  authNight.style.color = 'white';
+  label1.style.color = 'white'; 
+  label2.style.color = 'white';
+  loginButton.style = 'background-color: white';
+  reg.style = 'background-color: black';
+  regId.style.color = 'white';
+  chekText.style.color = 'white';
+  registrateBut.style = 'background-color: white';
+  
   burger.style = 'background-color: white; border-radius: 10px';
   musicText1Elements.forEach((element) => {
     element.style.color = 'black';
@@ -203,6 +139,19 @@ function disableDarkMode() {
   lngAbout.style.color = '';
   lngPrivacy.style.color = '';
   lngServices.style.color = '';
+  authR.style = '';
+  logOut.style.color = '';
+  getSt.style.color = '';
+  authorizationNight.style = '';
+  authNight.style.color = '';
+  label1.style.color = ''; 
+  label2.style.color = '';
+  loginButton.style = '';
+  reg.style = '';
+  regId.style.color = '';
+  chekText.style.color = '';
+  registrateBut.style = '';
+  
 
   musicText1Elements.forEach((element) => {
     element.style.color = '';
@@ -304,6 +253,7 @@ let fatherNameInput = registrationForm.querySelector('input[placeholder="Father 
 let mobilePhoneInput = registrationForm.querySelector('input[placeholder="Mobile phone"]');
 let emailInput = registrationForm.querySelector('input[placeholder="E-mail"]');
 let birthDateInput = registrationForm.querySelector('input[placeholder="Birth date"]');
+let usernameInput = registrationForm.querySelector('input[placeholder="Username"]');
 let passwordInput = registrationForm.querySelector('input[placeholder="Create a password"]');
 let repeatPasswordInput = registrationForm.querySelector('input[placeholder="Repeat a password"]');
 
@@ -336,34 +286,45 @@ function showErrorMessage() {
   let requiredFields = [
     { input: surnameInput, placeholder: 'Surname' },
     { input: nameInput, placeholder: 'Name' },
+    { input: fatherNameInput, placeholder: 'Father name' },
     { input: mobilePhoneInput, placeholder: 'Mobile phone' },
     { input: emailInput, placeholder: 'E-mail' },
     { input: birthDateInput, placeholder: 'Birth date' },
+    { input: usernameInput, placeholder: 'Username' },
     { input: passwordInput, placeholder: 'Create a password' },
     { input: repeatPasswordInput, placeholder: 'Repeat a password' },
   ];
 
-    for (let field of requiredFields) {
-      if (field.input.value === '') {
+  for (let field of requiredFields) {
+    if (field.input.value === '') {
+      if (!field.input.nextElementSibling || !field.input.nextElementSibling.classList.contains('error-message')) {
         let errorMessage = document.createElement('span');
         errorMessage.style.color = 'red';
         errorMessage.classList.add('error-message');
         errorMessage.textContent = `Please enter ${field.placeholder}`;
         field.input.insertAdjacentElement('afterend', errorMessage);
-      } else {
-        removeErrorMessage(field.input);
       }
+    } else {
+      removeErrorMessage(field.input);
     }
-    requiredFields.forEach(field => {
-      field.input.addEventListener('input', function() {
-        // Если в поле есть текст, удаляем сообщение об ошибке
-        if (field.input.value !== '') {
-          removeErrorMessage(field.input);
-        }
-      });
-    });
   }
 
+  requiredFields.forEach(field => {
+    field.input.addEventListener('input', function() {
+      // Если в поле есть текст, удаляем сообщение об ошибке
+      if (field.input.value !== '') {
+        removeErrorMessage(field.input);
+      }
+    });
+  });
+}
+
+function removeErrorMessage(input) {
+  let errorMessage = input.nextElementSibling;
+  if (errorMessage && errorMessage.classList.contains('error-message')) {
+    errorMessage.remove();
+  }
+}
 function removeErrorMessage(input) {
   let errorMessage = input.nextElementSibling;
   if (errorMessage && errorMessage.classList.contains('error-message')) {
@@ -405,26 +366,53 @@ function generateRandomUsername() {
 
   return randomUsername;
 }
-const secondCont = document.querySelector('.secondContainer');
-const thirdCont = document.querySelector('.thirdContainer');
-const fifthCont = document.querySelector('.fifthContainer');
-const Login = document.querySelector('.loginButton'); 
-Login.addEventListener('click', function(){ 
-  let logup = document.getElementById("Logup").value; 
-  let userpassword = document.getElementById("PasswordLog").value; 
-  username = logup; 
-  password = userpassword 
- let url = 'logins.json'; 
- fetch(url) 
- .then(response => response.json()) 
- .then(result => { for(let element of result){ 
-  if(element.login == username && element.password == password){ 
-    window.location = 'KR_Volchenkova_web.html'; 
-  } 
-  else{ 
-    alert('лох') 
-  } 
- }}); 
+document.addEventListener('DOMContentLoaded', function() {
+  const secondCont = document.querySelector('.secondContainer');
+  const thirdCont = document.querySelector('.thirdContainer');
+  const fifthCont = document.querySelector('.fifthContainer');
+  const Login = document.querySelector('.loginButton');
+  let qq = document.querySelector('.qq');
+
+  // Check if the user is already authenticated when the page loads
+  if (sessionStorage.getItem('isAuthenticated') === 'true') {
+    // If authenticated, apply the authenticated styles and display settings
+    secondCont.classList.add('secondContainer1');
+    thirdCont.classList.add('thirdContainer1');
+    fifthCont.classList.add('fifthContainer1');
+    qq.style.display = 'flex';
+  }
+
+  Login.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    let logup = document.getElementById("Logup").value;
+    let userpassword = document.getElementById("PasswordLog").value;
+    let username = logup;
+    let password = userpassword;
+    let url = 'logins.json';
+    fetch(url)
+      .then(response => response.json())
+      .then(result => {
+        let isAuthenticated = false;
+        for (let element of result) {
+          if (element.login === username && element.password === password) {
+            isAuthenticated = true;
+            break;
+          }
+        }
+        if (isAuthenticated) {
+          // Apply the authenticated styles and display settings
+          secondCont.classList.add('secondContainer1');
+          thirdCont.classList.add('thirdContainer1');
+          fifthCont.classList.add('fifthContainer1');
+          qq.style.display = 'flex';
+          location.reload();
+          sessionStorage.setItem('isAuthenticated', 'true');
+        } else {
+          alert('Ошибка входа. Пожалуйста, проверьте логин и пароль.');
+        }
+      });
+  });
 });
 
 let exit1 = document.querySelector('.exit1');
@@ -439,3 +427,26 @@ exit2.addEventListener('click', function(){
 exit3.addEventListener('click', function(){
   reg.style.marginLeft = '-4000px';
 });
+
+let url = 'lang.json'; 
+const selectLang = document.querySelector('.change-lang');
+selectLang.addEventListener('change', function() {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      const selectedLang = selectLang.value; // Получаем выбранный язык
+      const translation = data[selectedLang]; // Получаем перевод на выбранный язык
+
+      // Применяем перевод к нужным элементам вашего интерфейса
+      document.getElementById('title').textContent = translation.title;
+      document.querySelector('.lng-home').textContent = translation['.lng-home'];
+    })
+    .catch(error => {
+      console.error('Ошибка при загрузке и обработке JSON файла:', error);
+    });
+});
+logOut.addEventListener('click', function(){
+  sessionStorage.setItem('isAuthenticated', 'false');
+  location.reload();
+  localStorage.removeItem('savedPassword');
+})

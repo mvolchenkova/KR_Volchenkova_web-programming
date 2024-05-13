@@ -24,10 +24,10 @@
           <div class="links heeboFont linkDiv">
             <a href="" class="homeLink menuitem lng-home">Home</a>
             <a href="" class="headerText menuitem lng-explore">Explore</a>
-            <a href="" class="headerText menuitem lng-classes">Classes</a>
-            <a href="" class="headerText menuitem lng-about">About Us</a>
-            <a href="" class="headerText menuitem lng-privacy">Privacy</a>
-            <a href="" class="headerText menuitem lng-services">Services</a>
+            <a href="" class="headerText menuitem lng-classes classes1">Classes</a>
+            <a href="" class="headerText menuitem lng-about about1">About Us</a>
+            <a href="" class="headerText menuitem lng-privacy privacy1">Privacy</a>
+            <a href="" class="headerText menuitem lng-services services1">Services</a>
           </div>
           <div>
             <button class="burger">
@@ -57,7 +57,7 @@
               X
               </button>
             </div>
-            <p style="font-size: 2.5em; font-weight: bold;">Get start</p>
+            <p class="getStart">Get start</p>
             <button class="regBut">Registration</button>
             <button class="haveAccBut">Have account</button>
           </div>
@@ -70,11 +70,11 @@
                   </button>
                 </div>
                 <form action="" class="formAuthoriz">
-                  <b>Authorization</b>
+                  <b id="auth">Authorization</b>
                   <div class="authLab">
-                    <label for="">Login</label>
+                    <label for="" id="label1">Login</label>
                     <input type="text" placeholder="Login" id="Logup">
-                    <label for="">Password</label>
+                    <label for="" id="label2">Password</label>
                     <input type="password" placeholder="Password" id="PasswordLog">
                   </div>
                   <button class="loginButton">Log In</button>
@@ -82,7 +82,7 @@
               </div>
         </div>
         <div class="regDivBig">
-          <div class="heebofont regDiv">
+          <div class="heebofont regDiv regR">
             <div class="exitDiv">
               <button class="exit3">
               X
@@ -90,7 +90,7 @@
             </div>
             <div class="registration">
               <form action="" id="formregistr">
-                <b class="heeboFont">Registration</b>
+                <b class="heeboFont regId">Registration</b>
                 <div class="formDiv2">
                   <input type="text" placeholder="Surname">
                   <input type="text" placeholder="Name">
@@ -104,7 +104,7 @@
                 </div>
                 <label class="checkboxText heeboFont">
                   <input type="checkbox" id="agreeCheckbox">
-                  I agree to the <a href="">terms of the user agreement</a>
+                  I agree to the <a href="privacy.html">terms of the user agreement</a>
                 </label>
                 <button id="registrateBut">Create account</button>
               </form>
@@ -350,6 +350,8 @@
           <p class="nav1 lng-services2">Services</p>
           <p>|</p>
           <button class="resetButton heeboFont">Reset settings</button>
+          <p>|</p>
+          <button class="logOut heeboFont">Log Out</button>
         </div>
         <div class="links2">
           <img src="images_kr/facebook.png">

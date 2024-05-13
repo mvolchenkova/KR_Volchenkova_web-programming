@@ -5,6 +5,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
     font: inherit;
   }
+  
   body, html{
     width: 100%;
     max-width: 1920px;
@@ -362,7 +363,11 @@ form>b{
   justify-content: center;
   padding-top: 93px;
 }
-
+.secondContainer1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 93px;
+}
 .papersheets {
   width: 94%;
   display: flex;
@@ -437,6 +442,13 @@ form>b{
 }
 .thirdContainer{
   display: none;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+}
+.thirdContainer1{
+  display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -686,9 +698,17 @@ margin-top: -15px;
   display:none;
   flex-direction: column;
   background-position: center;
+  background-image: url("./images_kr/Background3.svg");
+}
+.fifthContainer1{
+  margin-top: -50px;
+  height: 1185px;
+  padding-top: 130px;
+  display:flex;
+  flex-direction: column;
+  background-position: center;
   background-image: url("./images_kr/Background3.svg")
 }
-
 .qqq{
   display: flex;
   flex-direction: row;
@@ -707,7 +727,7 @@ margin-top: -15px;
   margin-top: 70px;
 }
 .qq{
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
 }
@@ -932,7 +952,7 @@ footer{
 .darkMode header .head {
   background-color: black;
 }
-.resetButton{
+.resetButton, .logOut{
   border:none;
   background-color:transparent;
   font-size: 1em;
@@ -952,12 +972,6 @@ footer{
   }
   .practiceText{
     font-size: 2.5em;
-  }
-  .practiceLorem{
-    
-  }
-  .detoxLorem{
-    
   }
   .textGirl1Img, .textGirl2Img{
     display: none;
@@ -1171,6 +1185,7 @@ footer{
   }
 }
 @media screen and (max-width: 500px){
+  
   .sittingGirl{
     margin-top: 43px;
     width: 280px;
@@ -1205,6 +1220,9 @@ footer{
   }
 }
 @media screen and (max-width: 400px){
+  .h{
+    font-size: 1.5em;
+  }
   .button_play{
     margin-left: 0;
   }
@@ -1338,7 +1356,10 @@ input[type="submit"] {
   justify-content: center;
   
 }
-
+.getStart{
+  font-size: 2.5em; 
+  font-weight: bold;
+}
 #formregistr{
   display: flex;
     flex-direction: column;
@@ -1439,6 +1460,9 @@ input[type="Login"]{
   border-radius:20px;
 
 }
+#Logup{
+  margin-bottom: 30px;
+}
 .radio{
   transform:scale(2.0);
   margin: 0 20px 0 0;
@@ -1454,19 +1478,20 @@ input[type="Login"]{
   width: 80%;
   background-color:white;
   flex-direction: column;
-  padding: 50px 100px 50px 100px;
+  padding:10%;
   border-radius:50px;
 }
 .privDiv{
   display: flex;
   align-items:center;
   justify-content: center;
-  margin-top: 50px; 
+  margin: 50px; 
 }
 .h{
   font-size: 2.5em;
   color:rgb(60, 169, 129);
   font-weight: 600;
+  text-align: center;
 }
 .h1{
   font-size: 1.3em;
