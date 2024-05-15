@@ -37,12 +37,18 @@ regBut.addEventListener('click', function(){
 const burgerMenu = document.querySelector('.burgerMenu');
 const toggle = document.getElementById('checkbox');
 const header = document.querySelector('.head');
-const bodyElement = document.body;
+const bodyElement = document.querySelector('body');
 const meditationWindElement = document.querySelector('.meditationWind');
+const windText = document.querySelector('.windText');
+const windLor = document.querySelector('.windLorem');
 const breathElement = document.querySelector('.breath');
 const breathLoremElement = document.querySelector('.breathLorem');
-const musicText1Elements = document.querySelectorAll('.musicText1, .musicText1-2, .musicText1-3');
-const musicText2Elements = document.querySelectorAll('.musicText2, .musicText2-2, .musicText2-3');
+const mus1 = document.querySelector('.musicText1');
+const mus2 = document.querySelector('.musicText1-2');
+const mus3 = document.querySelector('.musicText1-3');
+const mus4 = document.querySelector('.musicText2');
+const mus5 = document.querySelector('.musicText2-2');
+const mus6 = document.querySelector('.musicText2-3');
 const transf = document.querySelector('.transf');
 const transfLorem = document.querySelector('.transfLorem');
 const namec1 = document.querySelector('.namec1');
@@ -68,29 +74,46 @@ const regId = document.querySelector('.regId');
 const chekText = document.querySelector('.checkboxText');
 const registrateBut = document.getElementById('registrateBut');
 const logOut = document.querySelector('.logOut');
-toggle.addEventListener('click', toggleDarkMode);
+const tel = document.querySelector('.tel');
+const email = document.querySelector('.emaill');
+const policyDiv = document.querySelector('.policyDiv');
+const rect1 = document.querySelector('.rect1');
+const rect2 = document.querySelector('.rect2');
+const rect3 = document.querySelector('.rect3');
 
-// Check if the current theme is stored in the local storage
-const storedTheme = localStorage.getItem('theme');
-if (storedTheme === 'dark') {
-  enableDarkMode();
+// Обработчик события изменения переключателя темы
+if (toggle) {
+  toggle.addEventListener('change', function() {
+    if (toggle.checked) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  });
 }
-function toggleDarkMode() {
-  if (bodyElement.classList.contains('darkMode')) {
-    disableDarkMode();
-  } else {
+
+document.addEventListener('DOMContentLoaded', function() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
     enableDarkMode();
+  } else {
+    disableDarkMode();
   }
-}
+});
+
 function enableDarkMode() {
   bodyElement.classList.add('darkMode');
   header.classList.add('darkMode');
-  meditationWindElement.style.backgroundImage = 'none';
+  meditationWindElement.style = 'background-image:none';
+  windText.style.color = 'white';
+  windLor.style.color = 'white';
+  transf.style.color = 'white';
+  transfLorem.style.color = 'white';
   breathElement.style.color = 'white';
   breathLoremElement.style.color = 'white';
-  burgerMenu.style = 'background-color: black ';
+  burgerMenu.style = 'background-color: black';
+  burger.style = 'background-color:white;border-radius:10px';
   headerText.style.color = 'white'; 
-  logOut.style.color = 'white';
   lngClasses.style.color = 'white';
   lngAbout.style.color = 'white';
   lngPrivacy.style.color = 'white';
@@ -105,21 +128,29 @@ function enableDarkMode() {
   reg.style = 'background-color: black';
   regId.style.color = 'white';
   chekText.style.color = 'white';
-  registrateBut.style = 'background-color: white';
-  
-  burger.style = 'background-color: white; border-radius: 10px';
-  musicText1Elements.forEach((element) => {
-    element.style.color = 'black';
-  });
-  musicText2Elements.forEach((element) => {
-    element.style.color = 'black';
-  });
-  const meditationWindTextElements = meditationWindElement.querySelectorAll('.windText, .windLorem');
-  meditationWindTextElements.forEach((element) => {
-    element.style.color = 'white';
-  });
-    const whiteTextElements = document.querySelectorAll('.transf, .transfLorem, .namec1, .descrc1, .descrc1-1, .namec2, .descrc2, .descrc2-1, .navs, .resetButton');
+  email.style.color = 'white';
+  tel.style.color = 'white';
+  namec1.style.color = 'white';
+  descrc1.style.color = 'white';
+  descrc11.style.color = 'white';
+  namec2.style.color = 'white';
+  descrc2.style.color = 'white';
+  descrc21.style.color = 'white';
+  mus1.style.color = 'white';
+  mus2.style.color = 'white';
+  mus3.style.color = 'white';
+  mus4.style.color = 'white';
+  mus5.style.color = 'white';
+  mus6.style.color = 'white';
+  rect1.style = 'margin:5px;background-image:none;border-radius:20px;background-color: gray';
+  rect2.style = 'margin:5px;background-image:none;border-radius:20px;background-color: gray';
+  rect3.style = 'margin:5px;background-image:none;border-radius:20px;background-color: gray';
 
+  registrateBut.style = 'background-color: white'; 
+
+  burger.style = 'background-color: white; border-radius: 10px';
+
+    const whiteTextElements = document.querySelectorAll('.transf, .transfLorem');
     whiteTextElements.forEach((element) => {
       element.style.color = 'white';
     });
@@ -132,6 +163,8 @@ function disableDarkMode() {
   bodyElement.classList.remove('darkMode');
   header.classList.remove('darkMode');
   breathElement.style.color = '';
+  windText.style.color = '';
+  windLor.style.color = '';
   breathLoremElement.style.color = '';
   burgerMenu.style = '';
   headerText.style.color = ''; 
@@ -151,24 +184,24 @@ function disableDarkMode() {
   regId.style.color = '';
   chekText.style.color = '';
   registrateBut.style = '';
-  
+  email.style.color = '';
+  tel.style.color = '';
+  mus1.style.color = '';
+  mus2.style.color = '';
+  mus3.style.color = '';
+  mus4.style.color = '';
+  mus5.style.color = '';
+  mus6.style.color = '';
+  rect1.style = '';
+  rect2.style = '';
+  rect3.style = '';
 
-  musicText1Elements.forEach((element) => {
-    element.style.color = '';
-  });
-  musicText2Elements.forEach((element) => {
-    element.style.color = '';
-  });
-  const meditationWindTextElements = meditationWindElement.querySelectorAll('.windText, .windLorem');
-  meditationWindTextElements.forEach((element) => {
-    element.style.color = '';
-  });
     const whiteTextElements = document.querySelectorAll('.transf, .transfLorem, .namec1, .descrc1, .descrc1-1, .namec2, .descrc2, .descrc2-1, .navs,.resetButton');
 
     whiteTextElements.forEach((element) => {
       element.style.color = 'black';
     });
-  
+  toggle.checked = false;
   localStorage.setItem('theme', 'light');
 }
 let slid1 = document.getElementById("slid1");
@@ -379,6 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
     secondCont.classList.add('secondContainer1');
     thirdCont.classList.add('thirdContainer1');
     fifthCont.classList.add('fifthContainer1');
+    getStartButton.style.display = 'none';
     qq.style.display = 'flex';
   }
 
@@ -414,6 +448,11 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
+logOut.addEventListener('click', function(){
+  sessionStorage.setItem('isAuthenticated', 'false');
+  location.reload();
+});
+
 
 let exit1 = document.querySelector('.exit1');
 let exit2 = document.querySelector('.exit2');
@@ -427,7 +466,10 @@ exit2.addEventListener('click', function(){
 exit3.addEventListener('click', function(){
   reg.style.marginLeft = '-4000px';
 });
-
+let exit4 = document.querySelector('.exit4');
+      exit4.addEventListener('click', function(){
+      history.back();
+      });
 let url = 'lang.json'; 
 const selectLang = document.querySelector('.change-lang');
 selectLang.addEventListener('change', function() {
@@ -445,8 +487,3 @@ selectLang.addEventListener('change', function() {
       console.error('Ошибка при загрузке и обработке JSON файла:', error);
     });
 });
-logOut.addEventListener('click', function(){
-  sessionStorage.setItem('isAuthenticated', 'false');
-  location.reload();
-  localStorage.removeItem('savedPassword');
-})

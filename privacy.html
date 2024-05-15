@@ -9,8 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
+    
     <div class="privDiv">
         <div class="heeboFont policyDiv">
+          <div class="exitDiv">
+            <button class="exit4">X</button>
+          </div>
             <p class="h">Privacy Policy</p>
             <p class="h1">General Information</p>
             <p>This Privacy Policy outlines how [Your Company Name] collects, uses, stores, and discloses information obtained from users (hereinafter referred to as "User") of the [Your Website URL] website (hereinafter referred to as "Site").</p>
@@ -30,6 +34,10 @@
             </p>
         </div>
     </div>
-    
-    
+    <script>
+      let exit4 = document.querySelector('.exit4');
+      exit4.addEventListener('click', function(){
+      history.back();
+      });
+    </script>
   </body>

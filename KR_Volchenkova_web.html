@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meditation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptive.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
   </head>
@@ -22,11 +23,11 @@
               <span class="slider round"></span>
             </label>
           <div class="links heeboFont linkDiv">
-            <a href="" class="homeLink menuitem lng-home">Home</a>
-            <a href="" class="headerText menuitem lng-explore">Explore</a>
-            <a href="" class="headerText menuitem lng-classes classes1">Classes</a>
-            <a href="" class="headerText menuitem lng-about about1">About Us</a>
-            <a href="" class="headerText menuitem lng-privacy privacy1">Privacy</a>
+            <a href="KR_Volchenkova_web.html" class="homeLink menuitem lng-home">Home</a>
+            <a href="explore.html" class="headerText menuitem lng-explore">Explore</a>
+            <a href="#sixth" class="headerText menuitem lng-classes classes1">Classes</a>
+            <a href="about.html" class="headerText menuitem lng-about about1">About Us</a>
+            <a href="privacy.html" class="headerText menuitem lng-privacy privacy1">Privacy</a>
             <a href="" class="headerText menuitem lng-services services1">Services</a>
           </div>
           <div>
@@ -37,14 +38,14 @@
           <div class="burgerDiv">
             <div class="burgerMenu">
               <div>
-                <button class="heeboFont">Home</button>
-                <button class="heeboFont">Explore</button>
-                <button class="heeboFont">Classes</button>
+                <button class="heeboFont"><a href="" style="text-decoration: none; color:black">Home</a></button>
+                <button class="heeboFont"><a href="explore.html" style="text-decoration: none; color:black">Explore</a></button>
+                <button class="heeboFont"><a href="#sixth" style="text-decoration: none; color:black">Classes</a></button>
               </div>
               <div>
-                <button class="heeboFont">About Us</button>
-                <button class="heeboFont">Privacy</button>
-                <button class="heeboFont">Services</button>
+                <button class="heeboFont"><a href="about.html" style="text-decoration: none; color:black">About Us</a></button>
+                <button class="heeboFont"><a href="privacy.html" class="privBut">Privacy</a></button>
+                <button class="heeboFont"><a href="" style="text-decoration: none; color:black">Services</a></button>
               </div>
             </div>
             
@@ -111,7 +112,7 @@
           </div>
         </div>
       </div>
-        
+     
       </header>
       <div class="popopo">
         <p class="meriendaFont Detoxify lng-med">
@@ -241,62 +242,65 @@
       </div>
     </div>
    </div>
-   <div class="fifthContainer heeboFont">
-    <div class="breathDiv">
-      <p class="meriendaFont breath lng-best">The Best Of Meditation</p>
-      <p class="heeboFont breathLorem lng-bestLor">"Lorem ipsum dolor sit amet, consectetur 
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-        magna aliqua.</p>
-    </div>
-    <div class="qq">
-     <img src="images_kr/Girl3Group.svg" class="girl3">
-
-      <div>
-          <div class="slidBut">
-            <button id="slid1">
-              <
-            </button>
-            <button id="slid2">
-              >
-            </button>
-          </div>
-          <div class="slid">
-            <div class="slideItem">
-              <p class="slName lng-peace">The Peace</p>
-              <p class="slDescr lng-peaceLor">which of us ever undertakes laborious physical exercise, 
-                except to obtain some advantage from it.</p>
-            </div>
-            <div class="slideItem">
-              <p class="slName lng-strength">Strength Building</p>
-              <p class="slDescr lng-strengthLor">Et harum quidem rerum facilis est et expedita 
-                distinctio. Nam libero tempore.</p>
-            </div>
-            <div class="slideItem">
-              <p class="slName lng-relex">Quick Relextion</p>
-              <p class="slDescr lng-relexLor">It is a long established fact that a reader will be distracted 
-                by the readable content of a page when looking at its layout.</p>
-            </div>
-            <div class="slideItem">
-              <p class="slName lng-refresh">Relex & Refresh</p>
-              <p class="slDescr lng-refreshLor">The generated Lorem Ipsum is therefore always 
-                free from repetition, injected humour.</p>
-            </div>
-            <div class="slideItem">
-              <p class="slName lng-beauty">Beauty Of Body</p>
-              <p class="slDescr lng-beautyLor">Various versions have evolved over the years  sometimes by 
-                accident sometimes on purpose injected humour and the like.</p>
-            </div>
-            <div class="slideItem">
-              <p class="slName lng-relief">Strees Relief</p>
-              <p class="slDescr lng-reliefLor">Neque porro quisquam est qui dolorem ipsum quia dolor 
-                sit amet consectetur adipisci velit.</p>
-            </div>
-           </div>
+   <div id="fifth">
+    <div class="fifthContainer heeboFont">
+      <div class="breathDiv">
+        <p class="meriendaFont breath lng-best">The Best Of Meditation</p>
+        <p class="heeboFont breathLorem lng-bestLor">"Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+          magna aliqua.</p>
       </div>
-    </div>
+      <div class="qq">
+       <img src="images_kr/Girl3Group.svg" class="girl3">
+  
+        <div>
+            <div class="slidBut">
+              <button id="slid1">
+                <
+              </button>
+              <button id="slid2">
+                >
+              </button>
+            </div>
+            <div class="slid">
+              <div class="slideItem">
+                <p class="slName lng-peace">The Peace</p>
+                <p class="slDescr lng-peaceLor">which of us ever undertakes laborious physical exercise, 
+                  except to obtain some advantage from it.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-strength">Strength Building</p>
+                <p class="slDescr lng-strengthLor">Et harum quidem rerum facilis est et expedita 
+                  distinctio. Nam libero tempore.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-relex">Quick Relextion</p>
+                <p class="slDescr lng-relexLor">It is a long established fact that a reader will be distracted 
+                  by the readable content of a page when looking at its layout.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-refresh">Relex & Refresh</p>
+                <p class="slDescr lng-refreshLor">The generated Lorem Ipsum is therefore always 
+                  free from repetition, injected humour.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-beauty">Beauty Of Body</p>
+                <p class="slDescr lng-beautyLor">Various versions have evolved over the years  sometimes by 
+                  accident sometimes on purpose injected humour and the like.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-relief">Strees Relief</p>
+                <p class="slDescr lng-reliefLor">Neque porro quisquam est qui dolorem ipsum quia dolor 
+                  sit amet consectetur adipisci velit.</p>
+              </div>
+             </div>
+        </div>
+      </div>
+     </div>
    </div>
+   
    <div class="sixthContainer">
-    <div>
+    <div id="sixth">
       <p class="meriendaFont transf lng-transf">Transform Your Body,
         Mind and Life Today</p>
       <p class="heeboFont transfLorem lng-transfLor">"At vero eos et accusamus et iusto odio dignissimos 
@@ -331,24 +335,35 @@
    <div class="mapDiv">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d285.82854865494033!2d30.048405678398247!3d53.9797320394495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1715112478457!5m2!1sru!2sby" class="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
    </div>
+   <div class="heeboFont contacts">
+    <div>
+      <p class="tel">Contact Us:</p>
+      <a href="tel:375291399052">+375291399052</a>
+    </div>
+    <div>
+      <p class="emaill">E-mail:</p>
+      <a href="mailto:mvolchenkova7@gmail.com">mvolchenkova7@gmail.com</a>
+    </div>
+    
+  </div>
     <footer>    
       <div>
         <div class="logo2">
         <img src="images_kr/Logo.svg">
         </div>  
         <div class="navs heeboFont">
-          <p class="nav1 lng-home2">Home</p>
-          <p>|</p>
-          <p class="nav1 lng-explore2">Explore</p>
-          <p>|</p>
-          <p class="nav1 lng-classes2">Classes</p>
-          <p>|</p>
-          <p class="nav1 lng-about2">About Us</p>
-          <p>|</p>
-          <p class="nav1 lng-privacy2">Privacy</p>
-          <p>|</p>
-          <p class="nav1 lng-services2">Services</p>
-          <p>|</p>
+          <p class="nav1 lng-home2"><a href="KR_Volchenkova_web.html" style="text-decoration: none; color:black">Home</a></p>
+                <p>|</p>
+                <p class="nav1 lng-explore2"><a href="explore.html" style="text-decoration: none; color:black">Explore</a></p>
+                <p>|</p>
+                <p class="nav1 lng-classes2"><a href="#sixth" style="text-decoration: none; color:black">Classes</a></p>
+                <p>|</p>
+                <p class="nav1 lng-about2"><a href="about.html" style="text-decoration: none; color:black">About Us</a></p>
+                <p>|</p>
+                <a href="privacy.html" class="nav1 lng-privacy2">Privacy</a>
+                <p>|</p>
+                <p class="nav1 lng-services2"><a href="" style="text-decoration: none; color:black">Services</a></p>
+                <p>|</p>
           <button class="resetButton heeboFont">Reset settings</button>
           <p>|</p>
           <button class="logOut heeboFont">Log Out</button>
