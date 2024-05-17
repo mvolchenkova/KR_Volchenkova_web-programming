@@ -442,6 +442,9 @@ document.addEventListener('DOMContentLoaded', function() {
           qq.style.display = 'flex';
           location.reload();
           sessionStorage.setItem('isAuthenticated', 'true');
+        
+          // Save username to localStorage
+          localStorage.setItem('username', username);
         } else {
           alert('Ошибка входа. Пожалуйста, проверьте логин и пароль.');
         }
@@ -450,6 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 logOut.addEventListener('click', function(){
   sessionStorage.setItem('isAuthenticated', 'false');
+  localStorage.removeItem('username');
   location.reload();
 });
 
@@ -466,24 +470,29 @@ exit2.addEventListener('click', function(){
 exit3.addEventListener('click', function(){
   reg.style.marginLeft = '-4000px';
 });
-let exit4 = document.querySelector('.exit4');
-      exit4.addEventListener('click', function(){
-      history.back();
-      });
-let url = 'lang.json'; 
-const selectLang = document.querySelector('.change-lang');
-selectLang.addEventListener('change', function() {
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const selectedLang = selectLang.value; // Получаем выбранный язык
-      const translation = data[selectedLang]; // Получаем перевод на выбранный язык
+//интернационализация
+document.addEventListener('DOMContentLoaded', function() {
+  // Загрузка данных из JSON файла
+  fetch('lang.json')
+  .then(response => response.json())
+  .then(langData => {
+      var selectElement = document.querySelector('.change-lang');
 
-      // Применяем перевод к нужным элементам вашего интерфейса
-      document.getElementById('title').textContent = translation.title;
-      document.querySelector('.lng-home').textContent = translation['.lng-home'];
-    })
-    .catch(error => {
-      console.error('Ошибка при загрузке и обработке JSON файла:', error);
-    });
+      selectElement.addEventListener('change', function() {
+          var selectedLang = selectElement.value;
+          var elementsToUpdate = document.querySelectorAll('[data-lang]');
+
+          elementsToUpdate.forEach(function(element) {
+              var key = element.getAttribute('data-lang');
+              var langObject = langData.find(lang => lang.title === key);
+              if (langObject && langObject[selectedLang]) {
+                  var text = langObject[selectedLang];
+                  element.textContent = text;
+              } else {
+                  console.error('Ошибка: Не найден языковой объект или свойство для выбранного языка');
+              }
+          });
+      });
+  })
+  .catch(error => console.error('Ошибка при загрузке JSON:', error));
 });

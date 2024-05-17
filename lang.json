@@ -1,10 +1,10 @@
-{
-  "EN": {
-    "title": "Meditation",
-    ".lng-home": "Home"
-  },
-  "RU": {
-    "title": "Медитация",
-    ".lng-home": "Главная"
-  }
-}
+[
+    {
+        "title": "Meditation",
+        "lng-home": "Home"
+    },
+    {
+        "title": "Медитация",
+        "lng-home": "Главная"
+    }
+]

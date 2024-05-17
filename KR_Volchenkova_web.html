@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meditation</title>
+    <title data-lang = "title">Meditation</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="adaptive.css">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     <div class="firstContainer">
       <header>
         <div class="head">
-          <img src="images_kr/Logo.svg" class="logo">
+          <img src="images_kr/Logo.svg" class="logo" alt="">
           <select class="change-lang heeboFont">
             <option value="en" selected>EN</option>
             <option value="ru">RU</option>
@@ -23,29 +23,29 @@
               <span class="slider round"></span>
             </label>
           <div class="links heeboFont linkDiv">
-            <a href="KR_Volchenkova_web.html" class="homeLink menuitem lng-home">Home</a>
+            <a href="KR_Volchenkova_web.html" class="homeLink menuitem lng-home" data-lang="lng-home">Home</a>
             <a href="explore.html" class="headerText menuitem lng-explore">Explore</a>
             <a href="#sixth" class="headerText menuitem lng-classes classes1">Classes</a>
             <a href="about.html" class="headerText menuitem lng-about about1">About Us</a>
             <a href="privacy.html" class="headerText menuitem lng-privacy privacy1">Privacy</a>
-            <a href="" class="headerText menuitem lng-services services1">Services</a>
+            <a href="employees.html" class="headerText menuitem lng-services services1">Services</a>
           </div>
           <div>
             <button class="burger">
-              <img src="./images_kr/menu.png" class="bur">
+              <img src="./images_kr/menu.png" class="bur" alt="">
             </button>
           </div>
           <div class="burgerDiv">
             <div class="burgerMenu">
               <div>
-                <button class="heeboFont"><a href="" style="text-decoration: none; color:black">Home</a></button>
-                <button class="heeboFont"><a href="explore.html" style="text-decoration: none; color:black">Explore</a></button>
-                <button class="heeboFont"><a href="#sixth" style="text-decoration: none; color:black">Classes</a></button>
+                <a href="" class="heeboFont" style="text-decoration: none; color:black">Home</a>
+                <a href="explore.html" class="heeboFont" style="text-decoration: none; color:black">Explore</a>
+                <a href="#sixth" class="heeboFont" style="text-decoration: none; color:black">Classes</a>
               </div>
               <div>
-                <button class="heeboFont"><a href="about.html" style="text-decoration: none; color:black">About Us</a></button>
-                <button class="heeboFont"><a href="privacy.html" class="privBut">Privacy</a></button>
-                <button class="heeboFont"><a href="" style="text-decoration: none; color:black">Services</a></button>
+                <a href="about.html" class="heeboFont" style="text-decoration: none; color:black">About Us</a>
+                <a href="privacy.html" class="heeboFont privBut" style="text-decoration: none; color:black">Privacy</a>
+                <a href="employees.html" class="heeboFont" style="text-decoration: none; color:black">Services</a>
               </div>
             </div>
             
@@ -70,12 +70,12 @@
                   X
                   </button>
                 </div>
-                <form action="" class="formAuthoriz">
+                <form class="formAuthoriz">
                   <b id="auth">Authorization</b>
                   <div class="authLab">
-                    <label for="" id="label1">Login</label>
+                    <label id="label1">Login</label>
                     <input type="text" placeholder="Login" id="Logup">
-                    <label for="" id="label2">Password</label>
+                    <label id="label2">Password</label>
                     <input type="password" placeholder="Password" id="PasswordLog">
                   </div>
                   <button class="loginButton">Log In</button>
@@ -90,7 +90,7 @@
               </button>
             </div>
             <div class="registration">
-              <form action="" id="formregistr">
+              <form id="formregistr">
                 <b class="heeboFont regId">Registration</b>
                 <div class="formDiv2">
                   <input type="text" placeholder="Surname">
@@ -99,7 +99,10 @@
                   <input type="text" placeholder="Mobile phone">
                   <input type="text" placeholder="E-mail">
                   <input type="text" placeholder="Birth date">
-                  <input type="text" placeholder="Username">
+                  <div style="display: flex;width: 100%;margin-right: -50px;">
+                    <input type="text" placeholder="Username" style="flex: 1;width: 100%;">
+                    <button onclick="generateNickname()" class="genBut">Generate</button>
+                  </div>
                   <input type="text" placeholder="Create a password">
                   <input type="text" placeholder="Repeat a password">
                 </div>
@@ -112,7 +115,6 @@
           </div>
         </div>
       </div>
-     
       </header>
       <div class="popopo">
         <p class="meriendaFont Detoxify lng-med">
@@ -126,36 +128,36 @@
         <button class="getStartButton lng-getStart">
           Get Start
         </button>
-        <img src="images_kr/GIRLvector.svg" class="sittingGirl">
+        <img src="images_kr/GIRLvector.svg" class="sittingGirl" alt="">
       </div>
     </div>
     <div class="secondContainer">
       <div class="papersheets">
         <div class="rect1">
-          <img src="images_kr/ic_meditation.png">
+          <img src="images_kr/ic_meditation.png" alt="">
           <p class="rectName heeboFont lng-meditation">Meditation</p>
           <p class="rectText heeboFont lng-meditationLor">There are many variations of passages of Lorem Ipsum available, 
             but the majority have suffered alteration in some form.</p>
-          <button class="learnMoreButton heeboFont">
-            <p class="lng-learnMore1">Learn More</p>
+          <button class="learnMoreButton heeboFont lng-learnMore1">
+            Learn More
           </button>
         </div>
         <div class="rect2">
-          <img src="images_kr/ic_yoga.png">
+          <img src="images_kr/ic_yoga.png" alt="">
           <p class="rectName heeboFont lng-yoga">Yoga</p>
           <p class="rectText heeboFont lng-yogaLor">It has survived not only five centuries, but also the leap into 
             electronic typesetting, remaining essentially unchanged.</p>
-          <button class="learnMoreButton heeboFont">
-            <p class="lng-learnMore2">Learn More</p>
+          <button class="learnMoreButton heeboFont lng-learnMore2">
+            Learn More
           </button>
         </div>
         <div class="rect3">
-          <img src="images_kr/ic_sound.png">
+          <img src="images_kr/ic_sound.png" alt="">
           <p class="rectName heeboFont lng-sound">Sound</p>
           <p class="rectText heeboFont lng-soundLor">It was popularised in the 1960s with the release of Letraset sheets 
             containing Lorem Ipsum passages, and more recently with desktop publishing.</p>
-          <button class="learnMoreButton heeboFont">
-            <p class="lng-learnMore3">Learn More</p>
+          <button class="learnMoreButton heeboFont ">
+            Learn More
           </button>
         </div>
       </div>
@@ -172,7 +174,7 @@
     </p>
     <div class="container3-1">
       <div class="YogaGirlDiv">
-        <img src="images_kr/YogaGirlVector.svg" class="YogaGirl">
+        <img src="images_kr/YogaGirlVector.svg" class="YogaGirl" alt="">
       </div>
       <div class="pap">
         <div class="meditationWind heeboFont">
@@ -180,7 +182,7 @@
           <p class="windLorem lng-medWindLor">There are many variations of passages of Lorem Ipsum available, 
             but the majority have suffered alteration in some form by injected.</p>
           <div class="arrow">
-            <img src="images_kr/arrow.png">
+            <img src="images_kr/arrow.png" alt="">
           </div>
         </div>
         
@@ -215,7 +217,7 @@
             <p class="musicText2 lng-mus1-1">Intriduction, Strees Assesment</p>
           </div>
           <div>
-            <img src="images_kr/button_play music.png" class="button_play">
+            <img src="images_kr/button_play_music.png" class="button_play" alt="">
           </div>
         </div>
         <div class="mus1">
@@ -224,7 +226,7 @@
             <p class="musicText2-2 lng-mus2-1">Relex Mind</p>
           </div>
           <div>
-            <img src="images_kr/button_play music.png" class="button_play2">
+            <img src="images_kr/button_play_music.png" class="button_play2" alt="">
           </div>
         </div>
         <div class="mus1">
@@ -233,12 +235,12 @@
             <p class="musicText2-3 lng-mus3-1">Strees Relief</p>
           </div>
           <div>
-            <img src="images_kr/button_play music.png" class="button_play3">
+            <img src="images_kr/button_play_music.png" class="button_play3" alt="">
           </div>
         </div>
       </div>
       <div>
-        <img src="images_kr/2girlsVector.svg" class="twogirls">
+        <img src="images_kr/2girlsVector.svg" class="twogirls" alt="">
       </div>
     </div>
    </div>
@@ -251,12 +253,12 @@
           magna aliqua.</p>
       </div>
       <div class="qq">
-       <img src="images_kr/Girl3Group.svg" class="girl3">
+       <img src="images_kr/Girl3Group.svg" class="girl3" alt="">
   
         <div>
             <div class="slidBut">
               <button id="slid1">
-                <
+                &lt;
               </button>
               <button id="slid2">
                 >
@@ -309,7 +311,7 @@
     </div>
     <div class="c1 heeboFont">
       <div class="textGirl1">
-        <img src="images_kr/vectorTw1.png" class="textGirl1Img">
+        <img src="images_kr/vectorTw1.png" class="textGirl1Img" alt="">
         <div class="c1-1">
           <p class="namec1 lng-anti">Antistrees Meditation</p>
           <p class="descrc1 lng-anti1">There are many variations of passages of Lorem Ipsum available, 
@@ -328,7 +330,7 @@
             injected humour, or non-characteristic words etc.</p>
           <button class="learnMoreButton2 lng-learnMore5">Learn More</button>
         </div>
-        <img src="images_kr/vectorTw2.png" class="textGirl2Img">
+        <img src="images_kr/vectorTw2.png" class="textGirl2Img" alt="">
       </div>
     </div>
    </div>
@@ -349,7 +351,7 @@
     <footer>    
       <div>
         <div class="logo2">
-        <img src="images_kr/Logo.svg">
+        <img src="images_kr/Logo.svg" alt="">
         </div>  
         <div class="navs heeboFont">
           <p class="nav1 lng-home2"><a href="KR_Volchenkova_web.html" style="text-decoration: none; color:black">Home</a></p>
@@ -369,14 +371,14 @@
           <button class="logOut heeboFont">Log Out</button>
         </div>
         <div class="links2">
-          <img src="images_kr/facebook.png">
-          <img src="images_kr/inst.png">
-          <img src="images_kr/ic_twitter.png">
+          <img src="images_kr/facebook.png" alt="">
+          <img src="images_kr/inst.png" alt="">
+          <img src="images_kr/ic_twitter.png" alt="">
         </div>
       </div>
     </footer>
     <script src="script.js"></script>
-    <script src="lang.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+    <script src="lang.json"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
   
   </body>

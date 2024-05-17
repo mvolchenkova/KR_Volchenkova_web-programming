@@ -1,0 +1,46 @@
+.aboutDiv{
+    margin-top: 50px;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+}
+.about{
+    background-color:white;
+    width: 90%;
+    display: flex;
+    justify-content:center ;
+    border-radius:20px;
+    flex-direction: column;
+    align-items:center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.about>div{
+    margin:10px;
+}
+.welcome{
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+.atMed{
+    width: 80%;
+    background-color: rgb(208,244,234);
+    padding:5px;
+    border-radius:10px;
+    text-align: center;
+}
+.at{
+    width: 80%;
+    padding:5px;
+    border-radius:10px;
+    font-size: 1.4em;
+    text-align: center;
+}
+.atText{
+    font-size: 1.5em;
+}
+.namaste{
+    font-size: 3em;
+
+}

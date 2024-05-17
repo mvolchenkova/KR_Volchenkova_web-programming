@@ -12,7 +12,7 @@
   <body>
     <header>
         <div class="head">
-          <img src="images_kr/Logo.svg" class="logo">
+          <img src="images_kr/Logo.svg" class="logo" alt="">
           <select class="change-lang heeboFont">
             <option value="en" selected>EN</option>
             <option value="ru">RU</option>
@@ -23,7 +23,7 @@
             </label>
           <div class="links heeboFont linkDiv">
             <a href="KR_Volchenkova_web.html" class="homeLink menuitem lng-home">Home</a>
-            <a href="" class="headerText menuitem lng-explore">Explore</a>
+            <a href="explore.html" class="headerText menuitem lng-explore">Explore</a>
             <a href="KR_Volchenkova_web.html#sixth" class="headerText menuitem lng-classes classes1">Classes</a>
             <a href="" class="headerText menuitem lng-about about1">About Us</a>
             <a href="privacy.html" class="headerText menuitem lng-privacy privacy1">Privacy</a>
@@ -31,35 +31,69 @@
           </div>
           <div>
             <button class="burger">
-              <img src="./images_kr/menu.png" class="bur">
+              <img src="./images_kr/menu.png" class="bur" alt="">
             </button>
           </div>
           <div class="burgerDiv">
             <div class="burgerMenu">
               <div>
-                <button class="heeboFont"><a href="KR_Volchenkova_web.html" style="text-decoration: none; color:black">Home</a></button>
-                <button class="heeboFont"><a href="explore.html" style="text-decoration: none; color:black">Explore</a></button>
-                <button class="heeboFont" onclick="openPageWithAnchor()">Classes</button>
+                <a href="" class="heeboFont" style="text-decoration: none; color:black">Home</a>
+                <a href="explore.html" class="heeboFont" style="text-decoration: none; color:black">Explore</a>
+                <a href="#sixth" class="heeboFont" style="text-decoration: none; color:black">Classes</a>
               </div>
               <div>
-                <button class="heeboFont"><a href="" style="text-decoration: none; color:black">About Us</a></button>
-                <button class="heeboFont"><a href="privacy.html" class="privBut">Privacy</a></button>
-                <button class="heeboFont"><a href="" style="text-decoration: none; color:black">Services</a></button>
+                <a href="about.html" class="heeboFont" style="text-decoration: none; color:black">About Us</a>
+                <a href="privacy.html" class="heeboFont privBut" style="text-decoration: none; color:black">Privacy</a>
+                <a href="employees.html" class="heeboFont" style="text-decoration: none; color:black">Services</a>
               </div>
             </div>
             </div>
           </div>
-        </div>
       </header>
+      <div class="aboutDiv heeboFont">
+        <div class="about">
+            <div>
+                <p class="welcome">Welcome to our Yoga and Meditation Website!</p>
+            </div>
+            <div class="at">
+                <p class="atText">At Meditation, we are passionate about sharing the transformative power of yoga and meditation. Our mission is to create a platform where individuals of all backgrounds can discover the numerous benefits of these ancient practices and integrate them into their daily lives.</p>
+            </div>
+            <div class="atMed">
+                <p class="welcome">Who We Are</p>
+                <p class="atText">We are a dedicated team of yoga and meditation enthusiasts, experienced practitioners, and certified instructors. Our collective expertise allows us to curate valuable content and resources that cater to practitioners at all levels, from beginners to advanced yogis.</p>
+            </div>
+            <div class="atMed">
+                <p class="welcome">What We Offer</p>
+                    <p class="atText">
+                        Informative Articles and Guides: Explore our extensive library of articles and guides covering various aspects of yoga and meditation. From understanding different yoga styles to learning meditation techniques, we provide comprehensive information to enhance your practice.
+                    </p>
+                    <p class="atText">
+                        Online Classes: Join our virtual yoga and meditation classes led by experienced instructors. Whether you prefer gentle Hatha yoga or invigorating Vinyasa flow, we offer diverse classes suitable for different preferences and skill levels. Our classes are designed to help you cultivate strength, flexibility, and inner peace.
+                    </p>
+                    <p class="atText">
+                        Guided Meditations: Access our collection of guided meditation sessions that can assist you in finding calmness, reducing stress, and developing mindfulness. Our meditations cover a range of topics, including relaxation, emotional healing, and spiritual growth.
+                    </p>
+                    <p class="atText">
+                        Community Support: Connect with like-minded individuals through our community forum. Share your experiences, ask questions, and receive support from fellow practitioners on your yoga and meditation journey. We believe in the power of community and aim to foster a supportive environment for everyone.
+                    </p>
+            </div>
+            <div class="atMed">
+                <p class="atText">Join us on this transformative journey towards self-discovery, balance, and inner harmony. Start exploring our website and unlock the transformative power of yoga and meditation in your life.</p>
+            </div>
+            <div class="namaste">
+                Namaste!
+            </div>
+        </div>
+      </div>
       <footer>    
         <div>
           <div class="logo2">
-          <img src="images_kr/Logo.svg">
+          <img src="images_kr/Logo.svg" alt="">
           </div>  
           <div class="navs heeboFont">
             <p class="nav1 lng-home2"><a href="KR_Volchenkova_web.html" style="text-decoration: none; color:black">Home</a></p>
             <p>|</p>
-            <p class="nav1 lng-explore2"><a href="" style="text-decoration: none; color:black">Explore</a></p>
+            <p class="nav1 lng-explore2"><a href="explore.html" style="text-decoration: none; color:black">Explore</a></p>
             <p>|</p>
             <p class="nav1 lng-classes2"><a href="#" onclick="openPageWithAnchor(); return false;" style="text-decoration: none; color:black">Classes</a></p>
             <p>|</p>
@@ -74,11 +108,12 @@
             <button class="logOut1 heeboFont">Log Out</button>
           </div>
           <div class="links2">
-            <img src="images_kr/facebook.png">
-            <img src="images_kr/inst.png">
-            <img src="images_kr/ic_twitter.png">
+            <img src="images_kr/facebook.png" alt="">
+            <img src="images_kr/inst.png" alt="">
+            <img src="images_kr/ic_twitter.png" alt="">
           </div>
         </div>
       </footer>
     <script src="script.js"></script>
+    <script src="explore.js"></script>
   </body>
