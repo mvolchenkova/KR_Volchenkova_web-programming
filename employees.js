@@ -13,7 +13,7 @@ const logOut2 = document.querySelector('.logOut2')
 logOut2.addEventListener('click', function(){
     sessionStorage.setItem('isAuthenticated', 'false');
     localStorage.removeItem('username');
-    location.reload();
+    window.location = 'KR_Volchenkova_web.html';
   });
 
   const toggle = document.getElementById('checkbox');
@@ -26,6 +26,8 @@ const services = document.querySelector('.lng-services');
 const bodyElement = document.querySelector('body');
 const exp1element = document.querySelectorAll('.exp1Element');
 const empDiv = document.querySelectorAll('.empDiv');
+const burgerMenu = document.querySelector('.burgerMenu');
+let burger = document.querySelector('.burger');
 
   function enableDarkMode() {
     header.classList.add('darkMode');
@@ -35,6 +37,8 @@ const empDiv = document.querySelectorAll('.empDiv');
     privacy.style.color = 'white'; 
     services.style.color = 'white'; 
     bodyElement.classList.add('darkMode');
+    burgerMenu.style = 'background-color: black';
+    burger.style = 'background-color:white;border-radius:10px';
     for(let elem of exp1element){
       elem.style = 'background-color: gray'
     }
@@ -51,6 +55,8 @@ const empDiv = document.querySelectorAll('.empDiv');
     about.style.color = ''; 
     privacy.style.color = ''; 
     services.style.color = ''; 
+    burgerMenu.style = '';
+    burger.style = '';
     bodyElement.classList.remove('darkMode');
     for(let elem of exp1element){
       elem.style = ''
@@ -78,3 +84,22 @@ const empDiv = document.querySelectorAll('.empDiv');
       }
     });
   }
+  let burgerDiv = document.querySelector('.burgerDiv');
+  
+  burger.addEventListener('click', function() {
+    if (burgerDiv.classList.contains('slide-from-top')) {
+      burgerDiv.classList.remove('slide-from-top');
+    } else {
+      burgerDiv.classList.add('slide-from-top');
+    }
+  });
+  let resetButton = document.querySelector('.resetButton');
+
+resetButton.addEventListener('click', function() {
+  localStorage.clear();
+  disableDarkMode();
+  toggle.checked = false;
+});
+function openPageWithAnchor() {
+  window.location.href = 'KR_Volchenkova_web.html#sixth';
+};

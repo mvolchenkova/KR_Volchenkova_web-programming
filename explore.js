@@ -1,10 +1,9 @@
-const logOut1 = document.querySelector('.logOut1');
-const isAuthenticated = true;
-
-logOut1.addEventListener('click', function(){
-    sessionStorage.setItem('isAuthenticated', 'false');
-    window.location = 'KR_Volchenkova_web.html';
-  });
+const logOut = document.querySelector('.logOut');
+logOut.addEventListener('click', function(){
+  sessionStorage.setItem('isAuthenticated', 'false');
+  localStorage.removeItem('username');
+  window.location = 'KR_Volchenkova_web.html';
+});
   function openPageWithAnchor() {
     window.location.href = 'KR_Volchenkova_web.html#sixth';
   };
@@ -18,7 +17,7 @@ const privacy = document.querySelector('.lng-privacy');
 const services = document.querySelector('.lng-services');
 const bodyElement = document.querySelector('body');
 const exp1element = document.querySelectorAll('.exp1Element');
-
+const burgerMenu = document.querySelector('.burgerMenu');
   function enableDarkMode() {
     header.classList.add('darkMode');
     explore.style.color = 'white'; 
@@ -26,6 +25,9 @@ const exp1element = document.querySelectorAll('.exp1Element');
     about.style.color = 'white'; 
     privacy.style.color = 'white'; 
     services.style.color = 'white'; 
+    
+  burgerMenu.style = 'background-color: black';
+  burger.style = 'background-color:white;border-radius:10px';
     bodyElement.classList.add('darkMode');
     for(let elem of exp1element){
       elem.style = 'background-color: gray'
@@ -40,6 +42,9 @@ const exp1element = document.querySelectorAll('.exp1Element');
     about.style.color = ''; 
     privacy.style.color = ''; 
     services.style.color = ''; 
+    burgerMenu.style = '';
+    burger.style = '';
+
     bodyElement.classList.remove('darkMode');
     for(let elem of exp1element){
       elem.style = ''
@@ -65,3 +70,21 @@ const exp1element = document.querySelectorAll('.exp1Element');
       }
     });
   }
+
+  let burger = document.querySelector('.burger');
+let burgerDiv = document.querySelector('.burgerDiv');
+
+burger.addEventListener('click', function() {
+  if (burgerDiv.classList.contains('slide-from-top')) {
+    burgerDiv.classList.remove('slide-from-top');
+  } else {
+    burgerDiv.classList.add('slide-from-top');
+  }
+});
+let resetButton = document.querySelector('.resetButton');
+
+resetButton.addEventListener('click', function() {
+  localStorage.clear();
+  disableDarkMode();
+  toggle.checked = false;
+});
