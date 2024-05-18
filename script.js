@@ -36,7 +36,7 @@ regBut.addEventListener('click', function(){
 
 const burgerMenu = document.querySelector('.burgerMenu');
 const toggle = document.getElementById('checkbox');
-const header = document.querySelector('.head');
+const header = document.querySelectorAll('.head');
 const bodyElement = document.querySelector('body');
 const meditationWindElement = document.querySelector('.meditationWind');
 const windText = document.querySelector('.windText');
@@ -103,7 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function enableDarkMode() {
   bodyElement.classList.add('darkMode');
-  header.classList.add('darkMode');
+  for(let elem of header){
+    elem.classList.add('darkMode');
+  }
+ 
   meditationWindElement.style = 'background-image:none';
   windText.style.color = 'white';
   windLor.style.color = 'white';
@@ -161,7 +164,9 @@ function enableDarkMode() {
 
 function disableDarkMode() {
   bodyElement.classList.remove('darkMode');
-  header.classList.remove('darkMode');
+  for(let elem of header){
+    elem.classList.remove('darkMode');
+  }
   breathElement.style.color = '';
   windText.style.color = '';
   windLor.style.color = '';
