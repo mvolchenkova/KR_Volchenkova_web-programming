@@ -23,3 +23,42 @@ let exit4 = document.querySelector('.exit4');
         }
       });
       
+      const toggle = document.getElementById('checkbox');
+      const bodyElement = document.querySelector('body');
+      const htmlElement = document.querySelector('html');
+
+      
+      if (toggle) {
+          toggle.addEventListener('change', function() {
+            if (toggle.checked) {
+              enableDarkMode();
+            } else {
+              disableDarkMode();
+            }
+          });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          const savedTheme = localStorage.getItem('theme');
+          if (savedTheme === 'dark') {
+            enableDarkMode();
+          } else {
+            disableDarkMode();
+          }
+        });
+        
+        function enableDarkMode() {
+          bodyElement.classList.add('darkMode');
+          htmlElement.classList.add('darkMode');
+
+          localStorage.setItem('theme', 'dark');
+          toggle.checked = true;
+        }
+        
+        function disableDarkMode() {
+          bodyElement.classList.remove('darkMode');
+          htmlElement.classList.remove('darkMode');
+
+          toggle.checked = false;
+          localStorage.setItem('theme', 'light');
+        }
