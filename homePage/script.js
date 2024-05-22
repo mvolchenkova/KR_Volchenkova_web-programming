@@ -66,13 +66,13 @@ const lngServices = document.querySelector('.services1');
 const authR = document.querySelector('.authReg');
 const getSt = document.querySelector('.getStart');
 const authorizationNight = document.querySelector('.authorization');
-const authNight = document.getElementById('auth');
-const label1 = document.getElementById('label1');
-const label2 = document.getElementById('label2');
+const authNight = document.querySelector('.auth');
+const label1 = document.querySelector('.label1');
+const label2 = document.querySelector('.label2');
 const loginButton = document.querySelector('.loginButton');
 const regId = document.querySelector('.regId');
 const chekText = document.querySelector('.checkboxText');
-const registrateBut = document.getElementById('registrateBut');
+const registrateBut = document.querySelector('.registrateBut');
 const logOut = document.querySelector('.logOut');
 const tel = document.querySelector('.tel');
 const email = document.querySelector('.emaill');
@@ -149,7 +149,7 @@ function enableDarkMode() {
   rect2.style = 'margin:5px;background-image:none;border-radius:20px;background-color: gray';
   rect3.style = 'margin:5px;background-image:none;border-radius:20px;background-color: gray';
 
-  registrateBut.style = 'background-color: white'; 
+  registrateBut.style = 'background-color:white'; 
 
   burger.style = 'background-color: white; border-radius: 10px';
 
@@ -267,7 +267,7 @@ resetButton.addEventListener('click', function() {
 });
 
 // Получаем ссылку на checkbox
-let agreeCheckbox = document.getElementById('agreeCheckbox');
+let agreeCheckbox = document.querySelector('.agreeCheckbox');
 
 // Добавляем обработчик события, чтобы проверять состояние checkbox'а
 agreeCheckbox.addEventListener('change', function() {
@@ -299,7 +299,6 @@ let repeatPasswordInput = registrationForm.querySelector('input[placeholder="Rep
 // Добавляем обработчик события при отправке формы
 registrationForm.addEventListener('submit', function(event) {
   event.preventDefault(); // Отменяем отправку формы по умолчанию
-
   // Проверяем заполнение обязательных полей
   if (
     surnameInput.value === '' ||
@@ -371,8 +370,11 @@ function removeErrorMessage(input) {
 }
 
 // Функция для генерации имени пользователя
+let genBut = document.querySelector('.genBut');
+
 function generateUsername() {
   // Генерируем имя пользователя 5 раз
+
   let generatedUsernames = [];
   for (let i = 0; i < 5; i++) {
     let username = generateRandomUsername();
@@ -476,28 +478,44 @@ exit3.addEventListener('click', function(){
   reg.style.marginLeft = '-4000px';
 });
 //интернационализация
-document.addEventListener('DOMContentLoaded', function() {
-  // Загрузка данных из JSON файла
-  fetch('lang.json')
-  .then(response => response.json())
-  .then(langData => {
-      var selectElement = document.querySelector('.change-lang');
+function loadLanguage(language) { 
+  let url = 'lang.json'; 
+  fetch(url) 
+    .then(response => response.json()) 
+    .then(data => { 
+      // Обновление текстовых значений элементов 
+      const elements = document.querySelectorAll('.data-lang'); 
+   
+      for (let element of elements) { 
+         
+        const key = element.getAttribute('data-lang'); 
+        let translation = data[language][key]; 
+        localStorage.setItem(key,translation); 
+        element.innerHTML = translation; 
+      } 
+    }); 
+} 
+const languageselect = document.querySelector('.change-lang');
+if (languageselect) {
+  languageselect.addEventListener('change', function() {
+    let select = languageselect.value;
+    loadLanguage(select);
 
-      selectElement.addEventListener('change', function() {
-          var selectedLang = selectElement.value;
-          var elementsToUpdate = document.querySelectorAll('[data-lang]');
+    localStorage.setItem('translate', select);
+  });
+}
 
-          elementsToUpdate.forEach(function(element) {
-              var key = element.getAttribute('data-lang');
-              var langObject = langData.find(lang => lang.title === key);
-              if (langObject && langObject[selectedLang]) {
-                  var text = langObject[selectedLang];
-                  element.textContent = text;
-              } else {
-                  console.error('Ошибка: Не найден языковой объект или свойство для выбранного языка');
-              }
-          });
-      });
-  })
-  .catch(error => console.error('Ошибка при загрузке JSON:', error));
-});
+const isEnLanguage = localStorage.getItem('translate');
+if (isEnLanguage === 'en') {
+  loadLanguage(isEnLanguage);
+  const EnOption = languageselect.querySelector('option[value="en"]');
+  if (EnOption) {
+    EnOption.selected = true;
+  }
+} else {
+  loadLanguage('ru');
+  const ruOption = languageselect.querySelector('option[value="ru"]');
+  if (ruOption) {
+    ruOption.selected = true;
+  }
+}
