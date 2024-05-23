@@ -17,7 +17,7 @@ let exit4 = document.querySelector('.exit4');
       showUsers.addEventListener('click', function() {
         if (storedUsername === 'admin') {
           // Перенаправляем пользователя на страницу users.html
-          window.location.href = 'users.html';
+          window.location.href = '../users/users.html';
         } else {
           alert('Вы не можете просматривать список пользователей.');
         }

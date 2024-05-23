@@ -2,7 +2,7 @@ const logOut = document.querySelector('.logOut');
 logOut.addEventListener('click', function(){
   sessionStorage.setItem('isAuthenticated', 'false');
   localStorage.removeItem('username');
-  window.location = 'KR_Volchenkova_web.html';
+  window.location = '../homePage/KR_Volchenkova_web.html';
 });
   function openPageWithAnchor() {
     window.location.href = 'KR_Volchenkova_web.html#sixth';
@@ -90,7 +90,7 @@ resetButton.addEventListener('click', function() {
 });
 //интернационализация
 function loadLanguage(language) { 
-  let url = 'lang.json'; 
+  let url = '../json/lang.json'; 
   fetch(url) 
     .then(response => response.json()) 
     .then(data => { 

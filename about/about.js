@@ -71,7 +71,7 @@ if (toggle) {
   logOut.addEventListener('click', function(){
     sessionStorage.setItem('isAuthenticated', 'false');
     localStorage.removeItem('username');
-    window.location = 'KR_Volchenkova_web.html';
+    window.location = '../homePage/KR_Volchenkova_web.html';
   });
   let resetButton = document.querySelector('.resetButton');
 

@@ -243,7 +243,7 @@ form>b{
       content: "";
       height: 26px;
       width: 26px;
-      content: url("./images_kr/sun.svg");
+      content: url("../images_kr/sun.svg");
       left: 4px;
       bottom: 4px;
       background-color: white;
@@ -259,7 +259,7 @@ form>b{
       box-shadow: 0 0 1px rgb(37,147,133);
     }
     input:checked + .slider:before {
-      content: url("./images_kr/moon.png");
+      content: url("../images_kr/moon.png");
       -webkit-transform: translateX(26px);
       -ms-transform: translateX(26px);
       transform: translateX(26px);
@@ -325,7 +325,7 @@ form>b{
   }
   .firstContainer{
     height: auto;
-    background-image: url("./images_kr/BGvector.svg");
+    background-image: url("../images_kr/BGvector.svg");
     top: 0;
     justify-content: center;
     background-repeat: no-repeat;
@@ -396,15 +396,15 @@ form>b{
 }
 
 .rect1 {
-  background-image: url("./images_kr/recctangle1.png");
+  background-image: url("../images_kr/recctangle1.png");
 }
 
 .rect2 {
-  background-image: url("./images_kr/rectangleCenter.svg");
+  background-image: url("../images_kr/rectangleCenter.svg");
 }
 
 .rect3 {
-  background-image: url("./images_kr/recctangle3.png");
+  background-image: url("../images_kr/recctangle3.png");
 }
 
 .rect1 > img,
@@ -471,7 +471,7 @@ form>b{
 .meditationWind{
   width: 780px;
   height: 350px;
-  background-image: url("./images_kr/rectangle4.png")
+  background-image: url("../images_kr/rectangle4.png")
 }
 .container3-1{
   flex-wrap: wrap;
@@ -604,14 +604,14 @@ margin-top: 20px;
   flex-direction: row;
   justify-content: space-around;
   padding-top: 110px;
-  background-image: url("./images_kr/rectangle5-6-7.svg")
+  background-image: url("../images_kr/rectangle5-6-7.svg")
 }
 .mus1{
   width: 760px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-image: url("./images_kr/rectangle5-6-7.svg");
+  background-image: url("../images_kr/rectangle5-6-7.svg");
   margin-top:-52px;
   padding-top: 110px;
 }
@@ -701,7 +701,7 @@ margin-top: -15px;
   display:none;
   flex-direction: column;
   background-position: center;
-  background-image: url("./images_kr/Background3.svg");
+  background-image: url("../images_kr/Background3.svg");
 }
 .fifthContainer1{
   margin-top: -50px;
@@ -710,7 +710,7 @@ margin-top: -15px;
   display:flex;
   flex-direction: column;
   background-position: center;
-  background-image: url("./images_kr/Background3.svg")
+  background-image: url("../images_kr/Background3.svg")
 }
 .qqq{
   display: flex;
@@ -770,7 +770,7 @@ margin-top: -15px;
   padding-left: 50px;
   padding-bottom: 38px;
   padding-right: 75px;
-  background-image: url("./images_kr/Rectangle9.svg")
+  background-image: url("../images_kr/Rectangle9.svg")
 }
 .sixthContainer{
   display: flex;
@@ -853,7 +853,7 @@ width: 50%;
 }
 
 .darkMode .slideItem {
-  background-image: url("./images_kr/Rectangle9.svg");
+  background-image: url("../images_kr/Rectangle9.svg");
 }
 .namec1{
   width: 100%;
@@ -904,7 +904,7 @@ footer{
   height: 305px;
   display: flex;
   justify-content: center;
-  background-image: url("./images_kr/footerbackground.png")
+  background-image: url("../images_kr/footerbackground.png")
 }
 .navs{
   display: flex;

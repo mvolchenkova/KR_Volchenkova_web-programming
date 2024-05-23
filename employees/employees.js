@@ -13,7 +13,7 @@ const logOut2 = document.querySelector('.logOut2')
 logOut2.addEventListener('click', function(){
     sessionStorage.setItem('isAuthenticated', 'false');
     localStorage.removeItem('username');
-    window.location = 'KR_Volchenkova_web.html';
+    window.location = '../homePage/KR_Volchenkova_web.html';
   });
 
   const toggle = document.getElementById('checkbox');
@@ -101,5 +101,5 @@ resetButton.addEventListener('click', function() {
   toggle.checked = false;
 });
 function openPageWithAnchor() {
-  window.location.href = 'KR_Volchenkova_web.html#sixth';
+  window.location.href = '../homePage/KR_Volchenkova_web.html#sixth';
 };

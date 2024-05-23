@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let userpassword = document.getElementById("PasswordLog").value;
     let username = logup;
     let password = userpassword;
-    let url = 'logins.json';
+    let url = '../json/logins.json';
     fetch(url)
       .then(response => response.json())
       .then(result => {
@@ -479,7 +479,7 @@ exit3.addEventListener('click', function(){
 });
 //интернационализация
 function loadLanguage(language) { 
-  let url = 'lang.json'; 
+  let url = '../json/lang.json'; 
   fetch(url) 
     .then(response => response.json()) 
     .then(data => { 
