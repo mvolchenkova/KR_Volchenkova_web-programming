@@ -469,18 +469,38 @@ genBut.addEventListener('click', function(){
 })
 
 // Функция для генерации случайного имени пользователя
-function generateRandomUsername() {
-  let characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-  let usernameLength = 8;
-  let randomUsername = '';
+function generateUsername() { 
+  const adjectives = ['Adventurous', 'Brave', 'Curious', 'Daring', 'Energetic', 'Friendly', 'Helpful', 'Imaginative', 'Kind', 'Optimistic',"Abacus","Candle","Eavesdrop","Gurgle","Icicle","Kaleidoscope","Marigold","Opaline","Quibble","Tangle","Vanguard","Xenial","Zephyr","Ambrosia","Daffodil","Frangipani","Gingko","Illusion"]; 
+  const nouns = ['Sunflower', 'Raindrop', 'Firefly', 'Pebble', 'Bumblebee', 'Starfish', 'Snowflake', 'Wildflower', 'Seashell', 'Dragonfly',"Bangle","Dangle","Fascinate","Hazelnut","Jargon","Limelight","Nimble","Panacea","Ramble","Serenade","Unravel","Whimsical","Yearn","Brocade","Camellia","Effervescent","Hinterland","Juniper"]; 
+ 
+  const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]; 
+  const randomNoun = nouns[Math.floor(Math.random() * nouns.length)]; 
+ 
+  return `${randomAdjective}${randomNoun}`; 
+} 
+let count = 0 
+ 
+const randombutton = document.querySelector('.genBut'); 
+randombutton.addEventListener('click',function(){ 
+   
+  let account = document.getElementById('username'); 
+  if(count < 5){ 
+   const username = generateUsername(); 
+   
+    account.value = username;  
+    count++; 
+  } 
+  else{ 
+    if(!checkerror){ 
+    let errorMessge = document.createElement('p'); 
+    errorMessge.innerText = "You cant generate more than 5 count"; 
+    errorMessge.style = "color: red; font-size: 12px" ; 
+    account.insertAdjacentElement('afterend', errorMessge); 
+    checkerror = true; 
+    } 
+  } 
+});
 
-  for (let i = 0; i < usernameLength; i++) {
-    let randomIndex = Math.floor(Math.random() * characters.length);
-    randomUsername += characters[randomIndex];
-  }
-
-  return randomUsername;
-}
 document.addEventListener('DOMContentLoaded', function() {
   const secondCont = document.querySelector('.secondContainer');
   const thirdCont = document.querySelector('.thirdContainer');
