@@ -16,7 +16,7 @@ logOut2.addEventListener('click', function(){
     window.location = '../homePage/KR_Volchenkova_web.html';
   });
 
-  const toggle = document.getElementById('checkbox');
+const toggle = document.getElementById('checkbox');
 const header = document.querySelector('.head');
 const explore = document.querySelector('.lng-explore');
 const classes = document.querySelector('.lng-classes');
@@ -94,12 +94,60 @@ let burger = document.querySelector('.burger');
     }
   });
   let resetButton = document.querySelector('.resetButton');
-
-resetButton.addEventListener('click', function() {
-  localStorage.clear();
-  disableDarkMode();
-  toggle.checked = false;
-});
+  const languageselect = document.querySelector('.change-lang');
+  resetButton.addEventListener('click', function() {
+      
+      localStorage.setItem('translate', 'ru');
+      let lang1 = localStorage.getItem('translate');
+      loadLanguage(lang1);
+      const da = languageselect.querySelector('option[value="ru"]');
+    if (da) {
+      da.selected = true;
+    }
+    disableDarkMode();
+  
+    toggle.checked = false;
+  });
 function openPageWithAnchor() {
   window.location.href = '../homePage/KR_Volchenkova_web.html#sixth';
 };
+
+function loadLanguage(language) { 
+  let url = '../json/lang.json'; 
+  fetch(url) 
+    .then(response => response.json()) 
+    .then(data => { 
+      // Обновление текстовых значений элементов 
+      const elements = document.querySelectorAll('.data-lang'); 
+   
+      for (let element of elements) { 
+         
+        const key = element.getAttribute('data-lang'); 
+        let translation = data[language][key]; 
+        localStorage.setItem(key,translation); 
+        element.innerHTML = translation; 
+      } 
+    }); 
+} 
+if (languageselect) {
+  languageselect.addEventListener('change', function() {
+    let select = languageselect.value;
+    loadLanguage(select);
+
+    localStorage.setItem('translate', select);
+  });
+}
+const isEnLanguage = localStorage.getItem('translate');
+  if (isEnLanguage === 'en') {
+    loadLanguage(isEnLanguage);
+    const EnOption = languageselect.querySelector('option[value="en"]');
+    if (EnOption) {
+      EnOption.selected = true;
+    }
+  } else {
+    loadLanguage('ru');
+    const ruOption = languageselect.querySelector('option[value="ru"]');
+    if (ruOption) {
+      ruOption.selected = true;
+    }
+  }

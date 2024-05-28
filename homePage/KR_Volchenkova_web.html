@@ -13,10 +13,10 @@
     <div class="firstContainer">
       <header>
         <div class="head">
-          <img src="../images_kr/Logo.svg" class="logo" alt="">
+          <img src="../images_kr/Logo.svg" class="logo" onclick="window.location = '../homePage/KR_Volchenkova_web.html'" alt="">
           <select class="change-lang heeboFont">
-            <option value="en" selected>EN</option>
-            <option value="ru">RU</option>
+            <option value="en" >EN</option>
+            <option value="ru" selected>RU</option>
           </select>
           <label class="switch">
               <input type="checkbox" id="checkbox">
@@ -96,15 +96,15 @@
                   <input type="text" placeholder="Surname">
                   <input type="text" placeholder="Name">
                   <input type="text" placeholder="Father Name">
-                  <input type="text" placeholder="Mobile phone">
-                  <input type="text" placeholder="E-mail">
+                  <input type="text" placeholder="Mobile phone" id="phone">
+                  <input type="text" placeholder="E-mail" id="email">
                   <input type="text" placeholder="Birth date">
                   <div style="display: flex; flex-direction: column;align-items:center">
-                    <input type="text" placeholder="Username" style="">
+                    <input type="text" placeholder="Username">
                     <button onclick="generateNickname()" class="genBut data-lang" data-lang="genBut">Generate username</button>
                   </div>
-                  <input type="text" placeholder="Create a password">
-                  <input type="text" placeholder="Repeat a password">
+                  <input type="password" placeholder="Create a password" id="pass1">
+                  <input type="password" placeholder="Repeat a password" id="pass2">
                 </div>
                 <label class="checkboxText heeboFont">
                   <input type="checkbox" class="agreeCheckbox data-lang" data-lang="agree">
@@ -346,6 +346,10 @@
       <p class="emaill">E-mail:</p>
       <a href="mailto:mvolchenkova7@gmail.com">mvolchenkova7@gmail.com</a>
     </div>
+    <div>
+      <p class="emaill  git">github:</p>
+      <a href="https://github.com/mvolchenkova">mvolchenkova</a>
+    </div>
     
   </div>
     <footer>    
@@ -354,9 +358,9 @@
         <img src="../images_kr/Logo.svg" alt="">
         </div>  
         <div class="navs heeboFont">
-          <p class="nav1 lng-home2"><a href="KR_Volchenkova_web.html" style="text-decoration: none; color:black" class=" data-lang" data-lang="home">Home</a></p>
+          <p class="nav1 lng-home2"><a href="KR_Volchenkova_web.html" style="text-decoration: none; color:black" class="data-lang" data-lang="home">Home</a></p>
                 <p>|</p>
-                <p class="nav1 lng-explore2"><a href="../explore/explore.html" style="text-decoration: none; color:black"class=" data-lang" data-lang="explore">Explore</a></p>
+                <p class="nav1 lng-explore2"><a href="../explore/explore.html" style="text-decoration: none; color:black" class="data-lang" data-lang="explore">Explore</a></p>
                 <p>|</p>
                 <p class="nav1 lng-classes2"><a href="#sixth" style="text-decoration: none; color:black" class=" data-lang" data-lang="classes">Classes</a></p>
                 <p>|</p>
@@ -364,7 +368,7 @@
                 <p>|</p>
                 <a href="../privacy/privacy.html" class="nav1 lng-privacy2 data-lang" data-lang="privacy">Privacy</a>
                 <p>|</p>
-                <p class="nav1 lng-services2"><a href="" style="text-decoration: none; color:black" class=" data-lang" data-lang="services">Services</a></p>
+                <p class="nav1 lng-services2"><a href="../employees/employees.html" style="text-decoration: none; color:black" class=" data-lang" data-lang="services">Services</a></p>
                 <p>|</p>
           <button class="resetButton heeboFont data-lang" data-lang="reset">Reset settings</button>
           <p>|</p>

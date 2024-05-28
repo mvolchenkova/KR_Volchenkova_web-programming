@@ -6,13 +6,15 @@
     <title>Meditation</title>
     <link rel="stylesheet" href="../homePage/style.css">
     <link rel="stylesheet" href="../explore/explore.css">
+    <link rel="stylesheet" href="../homePage/adaptive.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
   </head>
   <body>
         <header>
             <div class="head">
-              <img src="../images_kr/Logo.svg" class="logo" alt="">
+              <img src="../images_kr/Logo.svg" class="logo" onclick="window.location = '../homePage/KR_Volchenkova_web.html'" alt="">
               <select class="change-lang heeboFont">
                 <option value="en" selected>EN</option>
                 <option value="ru">RU</option>
@@ -22,101 +24,101 @@
                   <span class="slider round"></span>
                 </label>
               <div class="links heeboFont linkDiv">
-                <a href="../homePage/KR_Volchenkova_web.html" class="homeLink menuitem lng-home">Home</a>
-                <a href="../explore/explore.html" class="headerText menuitem lng-explore">Explore</a>
-                <a href="../homePage/KR_Volchenkova_web.html#sixth" class="headerText menuitem lng-classes classes1">Classes</a>
-                <a href="../about/about.html" class="headerText menuitem lng-about about1">About Us</a>
-                <a href="../privacy/privacy.html" class="headerText menuitem lng-privacy privacy1">Privacy</a>
-                <a href="../employees/employees.html" class="headerText menuitem lng-services services1">Services</a>
+                <a href="../homePage/KR_Volchenkova_web.html" class="homeLink menuitem lng-home data-lang" data-lang="home">Home</a>
+                <a href="../explore/explore.html" class="headerText menuitem lng-explore data-lang" data-lang="explore">Explore</a>
+                <a href="../homePage/KR_Volchenkova_web.html#sixth" class="headerText menuitem lng-classes classes1 data-lang" data-lang="classes">Classes</a>
+                <a href="../about/about.html" class="headerText menuitem lng-about about1 data-lang" data-lang="about">About Us</a>
+                <a href="../privacy/privacy.html" class="headerText menuitem lng-privacy privacy1 data-lang" data-lang="privacy">Privacy</a>
+                <a href="../employees/employees.html" class="headerText menuitem lng-services services1 data-lang" data-lang="services">Services</a>
               </div>
               <div>
                 <button class="burger">
-                  <img src="../images_kr/menu.png" class="bur" alt="">
+                  <img src="../images_kr/menuImg.png" class="bur" alt="">
                 </button>
               </div>
               <div class="burgerDiv">
                 <div class="burgerMenu">
                   <div>
-                    <a href="../homePage/KR_Volchenkova_web.html" class="heeboFont" style="text-decoration: none; color:black">Home</a>
-                    <a href="../explore/explore.html" class="heeboFont" style="text-decoration: none; color:black">Explore</a>
-                    <a href="../homePage/KR_Volchenkova_web.html#sixth" class="heeboFont" style="text-decoration: none; color:black">Classes</a>
+                    <a href="../homePage/KR_Volchenkova_web.html" class="heeboFont data-lang" data-lang="home" style="text-decoration: none; color:black">Home</a>
+                    <a href="../explore/explore.html" class="heeboFont data-lang" data-lang="explore" style="text-decoration: none; color:black">Explore</a>
+                    <a href="../homePage/KR_Volchenkova_web.html#sixth" class="heeboFont data-lang" data-lang="classes" style="text-decoration: none; color:black">Classes</a>
                   </div>
                   <div>
-                    <a href="../about/about.html" class="heeboFont" style="text-decoration: none; color:black">About Us</a>
-                    <a href="../privacy/privacy.html" class="heeboFont privBut" style="text-decoration: none; color:black">Privacy</a>
-                    <a href="../employees/employees.html" class="heeboFont serviceLink" style="text-decoration: none; color:black">Services</a>
+                    <a href="../about/about.html" class="heeboFont data-lang" data-lang="about" style="text-decoration: none; color:black">About Us</a>
+                    <a href="../privacy/privacy.html" class="heeboFont privBut data-lang" data-lang="privacy" style="text-decoration: none; color:black">Privacy</a>
+                    <a href="../employees/employees.html" class="heeboFont serviceLink data-lang" data-lang="services" style="text-decoration: none; color:black">Services</a>
                   </div>
                 </div>
                 </div>
               </div>
           </header>
-          <div class="notPerm heeboFont">
-            <p style="color: red;">YOU DON'T HAVE PERMISSION TO ACCESS THIS PAGE</p>
+          <div  style="color: red;"class="notPerm heeboFont data-lang" data-lang="notPerm">
+            <p>YOU DON'T HAVE PERMISSION TO ACCESS THIS PAGE</p>
           </div>
           <div class="empFullDiv heeboFont">
             <div class="empDiv">
                 <img src="../images_kr/man.png" alt="">
                 <div class="empNameDiv">
-                    <p style="font-weight: bold;">Elizaveta Khutsaidze</p>
-                    <p>Yoga Coach</p>
+                    <p style="font-weight: bold;" class=" data-lang" data-lang="eliz">Elizaveta Khutsaidze</p>
+                    <p class=" data-lang" data-lang="yogaCoach">Yoga Coach</p>
                 </div>
-                <button class="goBut">GO</button>
+                <button class="goBut data-lang" data-lang="go">GO</button>
             </div>
             <div class="empDiv">
                 <img src="../images_kr/man.png" alt="">
                 <div class="empNameDiv">
-                    <p style="font-weight: bold;">Tom Brown</p>
-                    <p>Programmer</p>
+                    <p style="font-weight: bold;"class=" data-lang" data-lang="tom">Tom Brown</p>
+                    <p class=" data-lang" data-lang="progr">Programmer</p>
                 </div>
-                <button class="goBut">GO</button>
+                <button class="goBut data-lang" data-lang="go">GO</button>
             </div>
             <div class="empDiv">
                 <img src="../images_kr/man.png" alt="">
                 <div class="empNameDiv">
-                    <p style="font-weight: bold;">Mary Jane</p>
-                    <p>Yoga Coach</p>
+                    <p style="font-weight: bold;" class=" data-lang" data-lang="mary">Mary Jane</p>
+                    <p class=" data-lang" data-lang="yogaCoach">Yoga Coach</p>
                 </div>
-                <button class="goBut">GO</button>
+                <button class="goBut data-lang" data-lang="go">GO</button>
             </div>
             <div class="empDiv">
                 <img src="../images_kr/man.png" alt="">
                 <div class="empNameDiv">
-                    <p style="font-weight: bold;">Alexander Sharoiko</p>
-                    <p>Meditation Coach</p>
+                    <p style="font-weight: bold;" class=" data-lang" data-lang="alex">Alexander Sharoiko</p>
+                    <p class=" data-lang" data-lang="medCoach">Meditation Coach</p>
                 </div>
-                <button class="goBut">GO</button>
+                <button class="goBut data-lang" data-lang="go">GO</button>
             </div>
             <div class="empDiv">
                 <img src="../images_kr/man.png" alt="">
                 <div class="empNameDiv">
-                    <p style="font-weight: bold;">Yasha Bolda</p>
-                    <p>Programmer</p>
+                    <p style="font-weight: bold;" class=" data-lang" data-lang="yasha">Yasha Bolda</p>
+                    <p class=" data-lang" data-lang="progr">Programmer</p>
                 </div>
-                <button class="goBut">GO</button>
+                <button class="goBut data-lang" data-lang="go">GO</button>
             </div>
           </div>
 
           <footer>    
             <div>
               <div class="logo2">
-              <img src="images_kr/Logo.svg" alt="">
+                <img src="../images_kr/Logo.svg" onclick="window.location = '../homePage/KR_Volchenkova_web.html'" alt="">
               </div>  
               <div class="navs heeboFont">
-                <p class="nav1 lng-home2"><a href="../homePage/KR_Volchenkova_web.html" style="text-decoration: none; color:black">Home</a></p>
+                <a href="../homePage/KR_Volchenkova_web.html" class="nav1 lng-home2 data-lang" data-lang="home" style="text-decoration: none; color:black">Home</a>
                 <p>|</p>
-                <p class="nav1 lng-explore2"><a href="../explore/explore.html" style="text-decoration: none; color:black">Explore</a></p>
+                <a href="../explore/explore.html" class="nav1 lng-explore2 data-lang" data-lang="explore" style="text-decoration: none; color:black">Explore</a>
                 <p>|</p>
-                <p class="nav1 lng-classes2"><a href="#" onclick="openPageWithAnchor(); return false;" style="text-decoration: none; color:black">Classes</a></p>
+                <a href="../homePage/KR_Volchenkova_web.html#sixth" class="nav1 lng-classes2 data-lang" data-lang="classes" onclick="openPageWithAnchor(); return false;" style="text-decoration: none; color:black">Classes</a>
                 <p>|</p>
-                <p class="nav1 lng-about2"><a href="../about/about.html" style="text-decoration: none; color:black">About Us</a></p>
+                <a href="../about/about.html" class="nav1 lng-about2 data-lang" data-lang="about" style="text-decoration: none; color:black">About Us</a>
                 <p>|</p>
-                <a href="../privacy/privacy.html" class="nav1 lng-privacy2">Privacy</a>
+                <a href="../privacy/privacy.html" class="nav1 lng-privacy2 data-lang" data-lang="privacy">Privacy</a>
                 <p>|</p>
-                <p class="nav1 lng-services2"><a href="../employees/employees.html" style="text-decoration: none; color:black">Services</a></p>
+                <a href="../employees/employees.html" class="nav1 lng-services2 data-lang" data-lang="services" style="text-decoration: none; color:black">Services</a>
                 <p>|</p>
-                <button class="resetButton heeboFont">Reset settings</button>
+                <button class="resetButton heeboFont data-lang" data-lang="reset">Reset settings</button>
                 <p>|</p>
-                <button class="logOut2 heeboFont">Log Out</button>
+                <button class="logOut2 heeboFont data-lang" data-lang="logOut">Log Out</button>
               </div>
               <div class="links2">
                 <img src="../images_kr/facebook.png" alt="">

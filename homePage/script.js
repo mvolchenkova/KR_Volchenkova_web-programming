@@ -1,26 +1,31 @@
 let burger = document.querySelector('.burger');
 let burgerDiv = document.querySelector('.burgerDiv');
-
+let authReg = document.querySelector('.authRegDiv');
+let haveAccBut = document.querySelector('.haveAccBut');
+let getStartButton = document.querySelector('.getStartButton');
+let authRegDiv = document.querySelector('.authRegDiv');
+let authorizationDiv = document.querySelector('.authorizationDiv');
+let auth = document.querySelector('.authorization');
 burger.addEventListener('click', function() {
+
   if (burgerDiv.classList.contains('slide-from-top')) {
     burgerDiv.classList.remove('slide-from-top');
   } else {
     burgerDiv.classList.add('slide-from-top');
+    authRegDiv.classList.remove('slide-from-left');
+    authorizationDiv.style.marginLeft = '-3000px'
+    reg.style.marginLeft = '-3000px';
   }
 });
-let haveAccBut = document.querySelector('.haveAccBut');
-let authReg = document.querySelector('.authRegDiv');
-let getStartButton = document.querySelector('.getStartButton');
-let auth = document.querySelector('.authorization');
+
 getStartButton.addEventListener('click', function(){
   if (authReg.classList.contains('slide-from-left')) {
     authReg.classList.remove('slide-from-left');
   } else {
     authReg.classList.add('slide-from-left');
+    burgerDiv.classList.remove('slide-from-top')
   }
 })
-let authRegDiv = document.querySelector('.authRegDiv');
-let authorizationDiv = document.querySelector('.authorizationDiv');
 
 haveAccBut.addEventListener('click', function() {
   authReg.classList.remove('slide-from-left');
@@ -80,6 +85,8 @@ const policyDiv = document.querySelector('.policyDiv');
 const rect1 = document.querySelector('.rect1');
 const rect2 = document.querySelector('.rect2');
 const rect3 = document.querySelector('.rect3');
+const git = document.querySelector('.git');
+
 
 // Обработчик события изменения переключателя темы
 if (toggle) {
@@ -132,6 +139,7 @@ function enableDarkMode() {
   regId.style.color = 'white';
   chekText.style.color = 'white';
   email.style.color = 'white';
+  git.style.color = 'white';
   tel.style.color = 'white';
   namec1.style.color = 'white';
   descrc1.style.color = 'white';
@@ -182,6 +190,7 @@ function disableDarkMode() {
   getSt.style.color = '';
   authorizationNight.style = '';
   authNight.style.color = '';
+  git.style.color = '';
   label1.style.color = ''; 
   label2.style.color = '';
   loginButton.style = '';
@@ -259,10 +268,18 @@ function validateForm() {
 }
 
 let resetButton = document.querySelector('.resetButton');
-
+const languageselect = document.querySelector('.change-lang');
 resetButton.addEventListener('click', function() {
-  localStorage.clear();
+    
+    localStorage.setItem('translate', 'ru');
+    let lang1 = localStorage.getItem('translate');
+    loadLanguage(lang1);
+    const da = languageselect.querySelector('option[value="ru"]');
+  if (da) {
+    da.selected = true;
+  }
   disableDarkMode();
+
   toggle.checked = false;
 });
 
@@ -312,9 +329,6 @@ registrationForm.addEventListener('submit', function(event) {
   ) {
     // Если хотя бы одно обязательное поле не заполнено или checkbox не отмечен, добавляем текстовое сообщение об ошибке
     showErrorMessage();
-  } else {
-    // Если все обязательные поля заполнены и checkbox отмечен, генерируем имя пользователя
-    generateUsername();
   }
 });
 
@@ -323,7 +337,6 @@ function showErrorMessage() {
   let requiredFields = [
     { input: surnameInput, placeholder: 'Surname' },
     { input: nameInput, placeholder: 'Name' },
-    { input: fatherNameInput, placeholder: 'Father name' },
     { input: mobilePhoneInput, placeholder: 'Mobile phone' },
     { input: emailInput, placeholder: 'E-mail' },
     { input: birthDateInput, placeholder: 'Birth date' },
@@ -355,11 +368,13 @@ function showErrorMessage() {
     });
   });
 }
-
-function removeErrorMessage(input) {
-  let errorMessage = input.nextElementSibling;
-  if (errorMessage && errorMessage.classList.contains('error-message')) {
-    errorMessage.remove();
+function matchPasswords(passwordInput, repeatPasswordInput){
+  if(passwordInput!==repeatPasswordInput)
+  {
+    alert('Check passwords')
+  }
+  else{
+    return true;
   }
 }
 function removeErrorMessage(input) {
@@ -368,30 +383,90 @@ function removeErrorMessage(input) {
     errorMessage.remove();
   }
 }
+function removeErrorMessage(input) {
+  let errorMessage = input.nextElementSibling;
+  if (errorMessage && errorMessage.classList.contains('error-message')) {
+    errorMessage.remove();
+  }
+}
 
+  function validatePhone(phone)
+  {
+    var phoneRegex = /^\+375\d{9}$/;
+    if (!phoneRegex.test(phone)) {
+      invalidphone = true;
+      alert('Invalid mobile phone input');
+    }
+    else{
+      return true;
+    }
+  }
+registrateBut.addEventListener('click', function(){
+  let url = '../json/logins.json';
+  let pass1 = document.getElementById('pass1').value;
+  let pass2 = document.getElementById('pass2').value;
+  const validationMessage = validatePassword(pass1); 
+  if(validationMessage){
+    alert(validationMessage);
+  }
+  let phone = document.getElementById('phone').value;
+  let email = document.getElementById('email').value;
+  // Добавляем обработчик события, чтобы проверять состояние checkbox'а
+  
+  if(validateEmail(email)===true&&validatePassword(pass1)===null&&
+  validatePhone(phone)===true&&matchPasswords(pass1, pass2)===true&&
+  agreeCheck()===true){
+    sessionStorage.setItem('isAuthenticated', true);
+    window.location = '../homePage/KR_Volchenkova_web.html';
+  }
+});
+function agreeCheck(){
+  agreeCheckbox = document.querySelector('.agreeCheckbox')
+  if (!agreeCheckbox.checked) {
+    alert('Read terms of user agreement');
+  }
+  else{
+    return true;
+  }
+}
+function validateEmail(email){
+  // Проверка email
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    invalidmail = true;
+    alert('Invalid E-mail input');
+  }
+  else
+  {
+    return true;
+  }
+};
+//проверка пароля
+function validatePassword(password) { 
+  // Проверяем длину пароля 
+  if (password.length < 8) { 
+    return "Пароль должен содержать не менее 8 символов"; 
+  } 
+  // Проверяем наличие специальных символов 
+  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) { 
+    return "Пароль должен содержать не менее одного специального символа"; 
+  } 
+  // Проверяем наличие заглавных букв 
+  if (!/[A-Z]/.test(password)) { 
+    return "Пароль должен содержать не менее одной заглавной буквы"; 
+  } 
+  // Проверяем наличие английских букв 
+  if (!/[a-zA-Z]/.test(password)) { 
+    return "Пароль должен содержать только английские буквы"; 
+  } 
+  // Если все проверки пройдены, пароль считается валидным 
+  return null; 
+}
 // Функция для генерации имени пользователя
 let genBut = document.querySelector('.genBut');
-
-function generateUsername() {
-  // Генерируем имя пользователя 5 раз
-
-  let generatedUsernames = [];
-  for (let i = 0; i < 5; i++) {
+genBut.addEventListener('click', function(){
     let username = generateRandomUsername();
-    generatedUsernames.push(username);
-  }
-
-  // Предлагаем пользователю выбрать одно из сгенерированных имен пользователя
-  let chosenUsername = prompt('Choose a username:', generatedUsernames.join('\n'));
-  if (chosenUsername && generatedUsernames.includes(chosenUsername)) {
-    // Пользователь выбрал одно из сгенерированных имен пользователя
-    // Выполняем дальнейшие действия, например, отправляем форму
-    registrationForm.submit();
-  } else {
-    // Пользователь не выбрал сгенерированное имя пользователя
-    // Можно выполнить необходимые действия или вывести сообщение об ошибке
-  }
-}
+})
 
 // Функция для генерации случайного имени пользователя
 function generateRandomUsername() {
@@ -478,6 +553,7 @@ exit3.addEventListener('click', function(){
   reg.style.marginLeft = '-4000px';
 });
 //интернационализация
+const initialLang = 'ru';
 function loadLanguage(language) { 
   let url = '../json/lang.json'; 
   fetch(url) 
@@ -495,7 +571,7 @@ function loadLanguage(language) {
       } 
     }); 
 } 
-const languageselect = document.querySelector('.change-lang');
+
 if (languageselect) {
   languageselect.addEventListener('change', function() {
     let select = languageselect.value;

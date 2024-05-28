@@ -82,10 +82,18 @@ burger.addEventListener('click', function() {
   }
 });
 let resetButton = document.querySelector('.resetButton');
-
+const languageselect = document.querySelector('.change-lang');
 resetButton.addEventListener('click', function() {
-  localStorage.clear();
+    
+    localStorage.setItem('translate', 'ru');
+    let lang1 = localStorage.getItem('translate');
+    loadLanguage(lang1);
+    const da = languageselect.querySelector('option[value="ru"]');
+  if (da) {
+    da.selected = true;
+  }
   disableDarkMode();
+
   toggle.checked = false;
 });
 //интернационализация
@@ -106,7 +114,6 @@ function loadLanguage(language) {
       } 
     }); 
 } 
-const languageselect = document.querySelector('.change-lang');
 if (languageselect) {
   languageselect.addEventListener('change', function() {
     let select = languageselect.value;

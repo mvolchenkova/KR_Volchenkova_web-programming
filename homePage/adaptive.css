@@ -235,6 +235,23 @@
       font-size: 1.68em;
       width: 80%;
       }
+      input[type=text],input[type=password]{
+        width: 70%;
+        font-size: 1.3em;
+      }
+      .registrateBut{
+        font-size: 1.5em;
+      }
+      .regId{
+        font-size: 2em;
+      }
+      .exitDiv{
+        padding-right: 40px;
+      }
+      .checkboxText{
+        font-size: 1.2em;
+        text-align: center;
+      }
   }
   @media screen and (max-width: 500px){
     
@@ -280,6 +297,9 @@
       .empDiv{
         font-size: 0.5em;
       }
+      .auth{
+        font-size: 2em;
+      }
   }
   @media screen and (max-width: 400px){
     .h{
@@ -312,6 +332,9 @@
     }
     .learnMoreButton2{
       font-size: 1.2em;
+    }
+    .regBut, .haveAccBut{
+      font-size: 1.4em;
     }
   }
   @media screen and (max-width: 320px){
