@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang = "title" class="data-lang">Meditation</title>
+    <link rel="stylesheet" href="../homePage/style.css">
+    <link rel="stylesheet" href="../homePage/adaptive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,700;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto&family=Work+Sans:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="firstContainer">
+      <header>
+        <div class="head">
+          <img src="../images_kr/Logo.svg" class="logo" onclick="window.location = '../homePage/KR_Volchenkova_web.html'" alt="">
+          <select class="change-lang heeboFont">
+            <option value="en" >EN</option>
+            <option value="ru" selected>RU</option>
+          </select>
+          <label class="switch">
+              <input type="checkbox" id="checkbox">
+              <span class="slider round"></span>
+            </label>
+          <div class="links heeboFont linkDiv">
+            <a href="KR_Volchenkova_web.html" class="homeLink menuitem data-lang" data-lang="home">Home</a>
+            <a href="../explore/explore.html" class="headerText menuitem lng-explore data-lang" data-lang="explore">Explore</a>
+            <a href="#sixth" class="headerText menuitem lng-classes classes1 data-lang" data-lang="classes">Classes</a>
+            <a href="../about/about.html" class="headerText menuitem lng-about about1 data-lang" data-lang="about">About Us</a>
+            <a href="../privacy/privacy.html" class="headerText menuitem lng-privacy privacy1 data-lang" data-lang="privacy">Privacy</a>
+            <a href="../employees/employees.html" class="headerText menuitem lng-services services1 data-lang" data-lang="services">Services</a>
+          </div>
+          <div>
+            <button class="burger">
+              <img src="../images_kr/menuImg.png" class="bur" alt="">
+            </button>
+          </div>
+          <div class="burgerDiv">
+            <div class="burgerMenu">
+              <div>
+                <a href="" class="heeboFont data-lang" style="text-decoration: none; color:black" data-lang="home">Home</a>
+                <a href="../explore/explore.html" class="heeboFont data-lang" style="text-decoration: none; color:black"  data-lang="explore">Explore</a>
+                <a href="#sixth" class="heeboFont data-lang" style="text-decoration: none; color:black" data-lang="classes">Classes</a>
+              </div>
+              <div>
+                <a href="../about/about.html" class="heeboFont data-lang" style="text-decoration: none; color:black" data-lang="about">About Us</a>
+                <a href="../privacy/privacy.html" class="heeboFont privBut data-lang" style="text-decoration: none; color:black" data-lang="privacy">Privacy</a>
+                <a href="../employees/employees.html" class="heeboFont data-lang" style="text-decoration: none; color:black" data-lang="services">Services</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="authRegDiv heeboFont">
+          <div class="authReg">
+            <div class="exitDiv">
+              <button class="exit1">
+              X
+              </button>
+            </div>
+            <p class="getStart data-lang" data-lang="getStart">Get start</p>
+            <button class="regBut data-lang" data-lang="registration">Registration</button>
+            <button class="haveAccBut data-lang" data-lang="haveAcc">Have account</button>
+          </div>
+        </div>
+        <div class="authorizationDiv heeboFont">
+              <div class="authorization">
+                <div class="exitDiv">
+                  <button class="exit2">
+                  X
+                  </button>
+                </div>
+                <form class="formAuthoriz">
+                  <b class="data-lang auth" data-lang="authorization">Authorization</b>
+                  <div class="authLab">
+                    <label class="label1 data-lang" data-lang="login">Login</label>
+                    <input type="text" placeholder="Login" id="Logup">
+                    <label class="label2 data-lang" data-lang="password">Password</label>
+                    <input type="password" placeholder="Password" id="PasswordLog">
+                  </div>
+                  <button class="loginButton data-lang" data-lang="LogIn">Log In</button>
+                </form>
+              </div>
+        </div>
+        <div class="regDivBig">
+          <div class="heebofont regDiv regR">
+            <div class="exitDiv">
+              <button class="exit3">
+              X
+              </button>
+            </div>
+            <div class="registration">
+              <form id="formregistr">
+                <b class="heeboFont regId data-lang" data-lang="registration">Registration</b>
+                <div class="formDiv2">
+                  <input type="text" placeholder="Surname">
+                  <input type="text" placeholder="Name">
+                  <input type="text" placeholder="Father Name">
+                  <input type="text" placeholder="Mobile phone" id="phone">
+                  <input type="text" placeholder="E-mail" id="email">
+                  <input type="text" placeholder="Birth date">
+                  <div style="display: flex; flex-direction: column;align-items:center">
+                    <input type="text" placeholder="Username">
+                    <button onclick="generateNickname()" class="genBut data-lang" data-lang="genBut">Generate username</button>
+                  </div>
+                  <input type="password" placeholder="Create a password" id="pass1">
+                  <input type="password" placeholder="Repeat a password" id="pass2">
+                </div>
+                <label class="checkboxText heeboFont">
+                  <input type="checkbox" class="agreeCheckbox data-lang" data-lang="agree">
+                  I agree to the <a href="../privacy/privacy.html" class="data-lang" data-lang="terms">terms of the user agreement</a>
+                </label>
+                <button class="registrateBut data-lang" data-lang="createAcc">Create account</button>
+              </form>
+          </div>
+        </div>
+      </div>
+      </header>
+      <div class="popopo">
+        <p class="meriendaFont Detoxify lng-med data-lang" data-lang="medHelps">
+        Meditations Helps You Detoxify Your Body
+        </p>
+        <p class="detoxLorem heeboFont lng-medLor data-lang" data-lang="medHelpsLor">
+          “It is a long established fact that a reader will be distracted by 
+          the readable content of a page when looking at its layout point 
+          of using Lorem Ipsum is that it has a more-or-less.”
+        </p>
+        <button class="getStartButton lng-getStart data-lang" data-lang="getStart">
+          Get Start
+        </button>
+        <img src="../images_kr/GIRLvector.svg" class="sittingGirl" alt="">
+      </div>
+    </div>
+    <div class="secondContainer">
+      <div class="papersheets">
+        <div class="rect1">
+          <img src="../images_kr/ic_meditation.png" alt="">
+          <p class="rectName heeboFont lng-meditation data-lang" data-lang="med">Meditation</p>
+          <p class="rectText heeboFont lng-meditationLor data-lang" data-lang="medLor">There are many variations of passages of Lorem Ipsum available, 
+            but the majority have suffered alteration in some form.</p>
+          <button class="learnMoreButton heeboFont lng-learnMore1 data-lang" data-lang="learnMore">
+            Learn More
+          </button>
+        </div>
+        <div class="rect2">
+          <img src="../images_kr/ic_yoga.png" alt="">
+          <p class="rectName heeboFont lng-yoga data-lang" data-lang="yoga">Yoga</p>
+          <p class="rectText heeboFont lng-yogaLor data-lang" data-lang="yogaLor">It has survived not only five centuries, but also the leap into 
+            electronic typesetting, remaining essentially unchanged.</p>
+          <button class="learnMoreButton heeboFont lng-learnMore2 data-lang" data-lang="learnMore">
+            Learn More
+          </button>
+        </div>
+        <div class="rect3">
+          <img src="../images_kr/ic_sound.png" alt="">
+          <p class="rectName heeboFont lng-sound data-lang" data-lang="sound">Sound</p>
+          <p class="rectText heeboFont lng-soundLor data-lang" data-lang="soundLor">It was popularised in the 1960s with the release of Letraset sheets 
+            containing Lorem Ipsum passages, and more recently with desktop publishing.</p>
+          <button class="learnMoreButton heeboFont data-lang" data-lang="learnMore">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+   <div class="thirdContainer">
+    <p class="meriendaFont practiceText lng-practice data-lang" data-lang="practice">
+      Practice Wherever You
+      Want, Whenever You Need
+    </p>
+    <p class="heeboFont practiceLorem lng-practiceLor data-lang" data-lang="practiceLor">
+      “These cases are perfectly simple and easy to distinguish. 
+      In a free hour, when our power of choice is untrammelled and when 
+      nothing prevents our being able to do what we like best.”
+    </p>
+    <div class="container3-1">
+      <div class="YogaGirlDiv">
+        <img src="../images_kr/YogaGirlVector.svg" class="YogaGirl" alt="">
+      </div>
+      <div class="pap">
+        <div class="meditationWind heeboFont">
+          <p class="windText lng-medWind data-lang" data-lang="medWind">Meditation Wind</p>
+          <p class="windLorem lng-medWindLor data-lang" data-lang="medWindLor">There are many variations of passages of Lorem Ipsum available, 
+            but the majority have suffered alteration in some form by injected.</p>
+          <div class="arrow">
+            <img src="../images_kr/arrow.png" alt="">
+          </div>
+        </div>
+        
+          <div class="stressReduction heeboFont">
+            <p class="stressText lng-stress data-lang" data-lang="stress">Stress Reduction</p>
+            <p class="stressLorem lng-stressLor data-lang" data-lang="stressLor">Nor again is there anyone who loves or 
+              pursues or desires to obtain pain of itself, because it is pain, 
+              but because occasionally can procure him some great pleasure.</p>
+          </div>
+        
+        <div class="selfComparison heeboFont">
+          <p class="selfText lng-self data-lang" data-lang="self">Self Compassion</p>
+          <p class="selfLorem lng-selfLor data-lang" data-lang="selfLor">It has survived not only five centuries, but also the leap 
+            into electronic typesetting, remaining essentially unchanged. 
+            It was popularised in the 1960s</p>
+        </div>
+      </div>
+    </div>
+   </div>
+   <div class="fourthContainer">
+    <div class="breathDiv">
+      <p class="meriendaFont breath lng-breath data-lang" data-lang="breath">Take a Deep Breath</p>
+      <p class="heeboFont breathLorem lng-breathLor data-lang" data-lang="breathLor">“Neque porro quisquam est, qui dolorem ipsum quia dolor 
+        sit amet, consectetur, adipisci velit, sed quia non numquam 
+        eius modi tempora incidunt ut labore.”</p>
+    </div>
+    <div class="container4-1">
+      <div class="heeboFont cont4-1-1">
+        <div class="music">
+          <div>
+            <p class="musicText1 lng-mus1 data-lang" data-lang="mus1">Turning off Auto Pilot</p>
+            <p class="musicText2 lng-mus1-1 data-lang" data-lang="mus1-1">Intriduction, Strees Assesment</p>
+          </div>
+          <div>
+            <img src="../images_kr/button_play_music.png" class="button_play" alt="">
+          </div>
+        </div>
+        <div class="mus1">
+          <div>
+            <p class="musicText1-2 lng-mus2 data-lang" data-lang="mus2">Crazy Wind Sound</p>
+            <p class="musicText2-2 lng-mus2-1 data-lang" data-lang="mus2-1">Relex Mind</p>
+          </div>
+          <div>
+            <img src="../images_kr/button_play_music.png" class="button_play2" alt="">
+          </div>
+        </div>
+        <div class="mus1">
+          <div>
+            <p class="musicText1-3 lng-mus3 data-lang" data-lang="mus3">Mental Wellness</p>
+            <p class="musicText2-3 lng-mus3-1 data-lang" data-lang="mus3-1">Strees Relief</p>
+          </div>
+          <div>
+            <img src="../images_kr/button_play_music.png" class="button_play3" alt="">
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="../images_kr/2girlsVector.svg" class="twogirls" alt="">
+      </div>
+    </div>
+   </div>
+   <div id="fifth">
+    <div class="fifthContainer heeboFont">
+      <div class="breathDiv">
+        <p class="meriendaFont breath lng-best data-lang" data-lang="best">The Best Of Meditation</p>
+        <p class="heeboFont breathLorem lng-bestLor data-lang" data-lang="bestLor">"Lorem ipsum dolor sit amet, consectetur 
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+          magna aliqua.</p>
+      </div>
+      <div class="qq">
+       <img src="../images_kr/Girl3Group.svg" class="girl3" alt="">
+  
+        <div>
+            <div class="slidBut">
+              <button id="slid1">
+                &lt;
+              </button>
+              <button id="slid2">
+                >
+              </button>
+            </div>
+            <div class="slid">
+              <div class="slideItem">
+                <p class="slName lng-peace data-lang" data-lang="peace">The Peace</p>
+                <p class="slDescr lng-peaceLor data-lang" data-lang="peaceLor">which of us ever undertakes laborious physical exercise, 
+                  except to obtain some advantage from it.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-strength data-lang" data-lang="strength">Strength Building</p>
+                <p class="slDescr lng-strengthLor data-lang" data-lang="strengthLor">Et harum quidem rerum facilis est et expedita 
+                  distinctio. Nam libero tempore.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-relex data-lang" data-lang="relex">Quick Relextion</p>
+                <p class="slDescr lng-relexLor data-lang" data-lang="relexLor">It is a long established fact that a reader will be distracted 
+                  by the readable content of a page when looking at its layout.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-refresh data-lang" data-lang="refresh">Relex & Refresh</p>
+                <p class="slDescr lng-refreshLor data-lang" data-lang="refreshLor">The generated Lorem Ipsum is therefore always 
+                  free from repetition, injected humour.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-beauty data-lang" data-lang="beauty">Beauty Of Body</p>
+                <p class="slDescr lng-beautyLor data-lang" data-lang="beautyLor">Various versions have evolved over the years  sometimes by 
+                  accident sometimes on purpose injected humour and the like.</p>
+              </div>
+              <div class="slideItem">
+                <p class="slName lng-relief data-lang" data-lang="relief">Strees Relief</p>
+                <p class="slDescr lng-reliefLor data-lang" data-lang="reliefLor">Neque porro quisquam est qui dolorem ipsum quia dolor 
+                  sit amet consectetur adipisci velit.</p>
+              </div>
+             </div>
+        </div>
+      </div>
+     </div>
+   </div>
+   
+   <div class="sixthContainer">
+    <div id="sixth">
+      <p class="meriendaFont transf lng-transf data-lang" data-lang="transf">Transform Your Body,
+        Mind and Life Today</p>
+      <p class="heeboFont transfLorem lng-transfLor data-lang" data-lang="transfLor">"At vero eos et accusamus et iusto odio dignissimos 
+        ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti 
+        quos  sint occaecati cupiditate non provident.”</p>
+    </div>
+    <div class="c1 heeboFont">
+      <div class="textGirl1">
+        <img src="../images_kr/vectorTw1.png" class="textGirl1Img" alt="">
+        <div class="c1-1">
+          <p class="namec1 lng-anti data-lang" data-lang="anti">Antistrees Meditation</p>
+          <p class="descrc1 lng-anti1 data-lang" data-lang="anti1">There are many variations of passages of Lorem Ipsum available, 
+            but the majority have suffered alteration in some form by injected.</p>
+          <p class="descrc1-1 lng-anti2 data-lang" data-lang="anti2">These cases are perfectly simple and easy to distinguish. In a free 
+            hour when our power of choice is untrammelled.</p>
+          <button class="learnMoreButton2 lng-learnMore4 data-lang" data-lang="learnMore">Learn More</button>
+        </div>
+      </div>
+      <div class="textGirl2 heeboFont">
+        <div class="BackyarkDiv">
+          <p class="namec1 namec2 lng-back data-lang" data-lang="back">Backyark Band Meditation</p>
+          <p class="descrc1 descrc2 lng-back1 data-lang" data-lang="back1">To take a trivial example, which of us ever undertakes laborious 
+            physical exercise except to obtain some advantage from it...</p>
+          <p class="descrc1-1 descrc2-1 lng-back2 data-lang" data-lang="back2">The generated Lorem Ipsum is therefore always free from repetition, 
+            injected humour, or non-characteristic words etc.</p>
+          <button class="learnMoreButton2 lng-learnMore5 data-lang" data-lang="learnMore">Learn More</button>
+        </div>
+        <img src="../images_kr/vectorTw2.png" class="textGirl2Img" alt="">
+      </div>
+    </div>
+   </div>
+   <div class="mapDiv">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d285.82854865494033!2d30.048405678398247!3d53.9797320394495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1715112478457!5m2!1sru!2sby" class="map" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+   <div class="heeboFont contacts">
+    <div>
+      <p class="tel data-lang" data-lang="contactUs">Contact Us:</p>
+      <a href="tel:375291399052">+375291399052</a>
+    </div>
+    <div>
+      <p class="emaill">E-mail:</p>
+      <a href="mailto:mvolchenkova7@gmail.com">mvolchenkova7@gmail.com</a>
+    </div>
+    <div>
+      <p class="emaill  git">github:</p>
+      <a href="https://github.com/mvolchenkova">mvolchenkova</a>
+    </div>
+    
+  </div>
+    <footer>    
+      <div>
+        <div class="logo2">
+        <img src="../images_kr/Logo.svg" alt="">
+        </div>  
+        <div class="navs heeboFont">
+          <p class="nav1 lng-home2"><a href="KR_Volchenkova_web.html" style="text-decoration: none; color:black" class="data-lang" data-lang="home">Home</a></p>
+                <p>|</p>
+                <p class="nav1 lng-explore2"><a href="../explore/explore.html" style="text-decoration: none; color:black" class="data-lang" data-lang="explore">Explore</a></p>
+                <p>|</p>
+                <p class="nav1 lng-classes2"><a href="#sixth" style="text-decoration: none; color:black" class=" data-lang" data-lang="classes">Classes</a></p>
+                <p>|</p>
+                <p class="nav1 lng-about2"><a href="../about/about.html" style="text-decoration: none; color:black" class=" data-lang" data-lang="about">About Us</a></p>
+                <p>|</p>
+                <a href="../privacy/privacy.html" class="nav1 lng-privacy2 data-lang" data-lang="privacy">Privacy</a>
+                <p>|</p>
+                <p class="nav1 lng-services2"><a href="../employees/employees.html" style="text-decoration: none; color:black" class=" data-lang" data-lang="services">Services</a></p>
+                <p>|</p>
+          <button class="resetButton heeboFont data-lang" data-lang="reset">Reset settings</button>
+          <p>|</p>
+          <button class="logOut heeboFont data-lang" data-lang="logOut">Log Out</button>
+        </div>
+        <div class="links2">
+          <img src="../images_kr/facebook.png" alt="">
+          <img src="../images_kr/inst.png" alt="">
+          <img src="../images_kr/ic_twitter.png" alt="">
+        </div>
+      </div>
+    </footer>
+    <script src="../homePage/script.js"></script>
+    <script src="../json/lang.json"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  
+  </body>
